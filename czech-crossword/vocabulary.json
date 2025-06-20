@@ -1,247 +1,3519 @@
 {
-    "AUTO": ["Dopravní prostředek se čtyřmi koly", "Jezdí po silnici", "Potřebuje benzín nebo elektřinu", "Používáme ho na výlety"],
-    "AUTOBUS": ["Velké auto pro hodně lidí", "Jezdí po městě a mezi městy", "Nastupujeme do něj na zastávce", "Řídí ho řidič"],
-    "BABIČKA": ["Matka rodičů", "Peče buchty a koláče", "Vypráví pohádky", "Bydlí na venkově nebo ve městě"],
-    "BANÁN": ["Žluté a podlouhlé ovoce", "Loupeme ho", "Roste v trsech", "Je měkký a sladký"],
-    "BARVA": ["Vlastnost světla (červená, modrá, ...)", "Používáme ji při malování", "Svět je jich plný", "Mícháním vznikají nové"],
-    "BOTA": ["Obuv, kterou nosíme na nohách", "Chrání nás před chladem a špínou", "Mohou být sportovní nebo zimní", "Zavazujeme je na tkaničky"],
-    "BRAMBORA": ["Hnědá zelenina, která roste v zemi", "Dělají se z ní hranolky", "Loupe se", "Vaří se jako příloha"],
-    "BRATR": ["Sourozenec mužského pohlaví", "Kluk, který má stejné rodiče", "Hrajeme si s ním", "Někdy se s ním hádáme"],
-    "BRÝLE": ["Nosíme je na nose, abychom lépe viděli", "Mají skla a obroučky", "Předepisuje je oční lékař", "Mohou být i sluneční"],
-    "BUNDA": ["Oblečení proti zimě nebo dešti", "Má dlouhé rukávy a zip", "Nosíme ji na jaře a na podzim", "Může mít kapuci"],
-    "BŘICHO": ["Část těla mezi hrudníkem a nohama", "Máme v něm žaludek", "Kručí v něm, když máme hlad", "Je měkké"],
-    "CHLEBA": ["Základní potravina z mouky", "Jíme ho s máslem nebo sýrem", "Peče se v pekárně", "Krájí se na krajíce"],
-    "CITRON": ["Žluté a kyselé ovoce", "Dáváme si ho do čaje", "Roste na stromě", "Obsahuje vitamín C"],
-    "CUKR": ["Bílá a sladká látka", "Sladíme s ním čaj nebo koláče", "Je v bonbonech a čokoládě", "Vyrábí se z řepy"],
-    "CIBULE": ["Zelenina, která pálí do očí", "Je kulatá a má slupky", "Dává se do guláše", "Může být žlutá nebo červená"],
-    "DEN": ["Část dne, kdy je světlo", "Opak noci", "Vstáváme ráno a jdeme spát večer", "Má 24 hodin"],
-    "DELFÍN": ["Chytré mořské zvíře", "Rád skáče nad hladinu", "Komunikuje pomocí pískání", "Je to savec, ne ryba"],
-    "DORT": ["Sladký dezert k narozeninám", "Mívá na sobě svíčky", "Je kulatý a krájí se na dílky", "Často s krémem a ovocem"],
-    "DVEŘE": ["Vstup do místnosti nebo domu", "Otevíráme a zavíráme je", "Mají kliku", "Zamykáme je klíčem"],
-    "DÍTĚ": ["Malý člověk, kluk nebo holka", "Chodí do školy nebo do školky", "Hraje si s hračkami", "Roste"],
-    "DĚDEČEK": ["Otec rodičů", "Nosí brýle a čte noviny", "Učí nás nové věci", "Chodí s námi na procházky"],
-    "DÉŠŤ": ["Kapky vody padající z nebe", "Nosíme při něm deštník", "Zalévá květiny a trávu", "Dělá kaluže"],
-    "DŮM": ["Místo, kde bydlíme", "Stavba se střechou a okny", "Má několik místností", "Chrání nás před deštěm"],
-    "DŽUS": ["Nápoj z vymačkaného ovoce", "Může být pomerančový nebo jablečný", "Je zdravý a plný vitamínů", "Pijeme ho k snídani"],
-    "FILM": ["Pohyblivé obrázky s příběhem", "Díváme se na něj v kině nebo v televizi", "Může být animovaný nebo hraný", "Jíme u něj popcorn"],
-    "FOTOAPARÁT": ["Přístroj na focení obrázků", "Zachytí okamžik", "Dívá se do něj jedním okem", "Dnes ho máme i v telefonu"],
-    "GUMA": ["Pomůcka na mazání tužky", "Používáme ji, když uděláme chybu", "Je měkká", "Je ve škole nezbytná"],
-    "GAUČ": ["Velké pohodlné křeslo pro více lidí", "Stojí v obývacím pokoji", "Díváme se z něj na televizi", "Může být rozkládací"],
-    "HAD": ["Zvíře bez nohou", "Plazí se po zemi", "Může syčet", "Někteří jsou jedovatí"],
-    "HLAVA": ["Horní část těla", "Máme na ní vlasy, oči, nos a pusu", "Je v ní mozek", "Nosíme na ní čepici"],
-    "HODINY": ["Ukazují, kolik je času", "Mají ciferník a ručičky", "Tikají", "Visí na zdi nebo je máme na ruce"],
-    "HOLUB": ["Pták, který žije ve městech", "Dělá 'vrkú, vrkú'", "Často sedí na střechách a sochách", "Posílali se s ním dopisy"],
-    "HORA": ["Velký kopec", "Nejvyšší v Česku je Sněžka", "V zimě na ní lyžujeme", "Jsou na ní skály a lesy"],
-    "HRAD": ["Pevnost postavená v minulosti", "Chránil před nepřáteli", "Často stojí na kopci", "Mívá hradby a příkop"],
-    "HRNEK": ["Nádoba na pití", "Má ouško", "Pijeme z něj čaj nebo kakao", "Může být keramický nebo skleněný"],
-    "HRNEC": ["Nádoba na vaření", "Vaříme v něm polévku nebo brambory", "Je velký a kulatý", "Může mít pokličku"],
-    "HRUŠKA": ["Ovoce ve tvaru zvonu", "Roste na stromě", "Je sladká", "Může být zelená nebo žlutá"],
-    "HUDBA": ["Zvuky a melodie", "Posloucháme ji z rádia nebo z telefonu", "Může být veselá nebo smutná", "Hrají ji hudební nástroje"],
-    "HUS": ["Velký bílý pták s dlouhým krkem", "Dělá 'ga, ga'", "Plave na rybníce", "Je podobná kachně, ale větší"],
-    "HVĚZDA": ["Svítící bod na noční obloze", "Je to obrovské slunce daleko od nás", "Tvoří souhvězdí", "Nejznámější je Polárka"],
-    "HŘEBÍK": ["Malý kovový hrot", "Zatloukáme ho kladivem", "Spojuje se s ním dřevo", "Věšíme na něj obrázky"],
-    "HŘIŠTĚ": ["Místo na hraní venku", "Bývá na něm písek, houpačky a skluzavka", "Hrajeme si na něm s kamarády", "Musíme na něm být opatrní"],
-    "JABLKO": ["Kulaté ovoce", "Může být červené nebo zelené", "Roste na stromě", "Je sladké a šťavnaté"],
-    "JAHODA": ["Malé červené ovoce", "Roste na zemi", "Má na sobě zelenou čepičku a tečky", "Dáváme si ji se šlehačkou"],
-    "JARO": ["Jedno ze čtyř ročních období", "Příroda se probouzí", "Kvetou stromy a květiny", "Začíná na jaře"],
-    "JELEN": ["Velké lesní zvíře s parožím", "Říká se mu král lesa", "V zimě shazuje paroží", "Žije v lese"],
-    "JESKYNĚ": ["Díra ve skále nebo pod zemí", "Bývá v ní tma a zima", "Žili v ní pravěcí lidé", "Jsou v ní krápníky"],
-    "JEZERO": ["Velká přírodní nádrž se sladkou vodou", "Je větší než rybník", "Můžeme se v něm koupat a jezdit na lodi", "Největší u nás je Lipno"],
-    "JEŽEK": ["Malé zvíře s bodlinami", "Když se bojí, schoulí se do klubíčka", "V noci loví hmyz", "Na zimu se ukládá k spánku"],
-    "JÍDLO": ["To, co jíme", "Dává nám energii", "Snídaně, oběd, večeře", "Může být sladké nebo slané"],
-    "KABÁT": ["Teplé svrchní oblečení", "Nosíme ho v zimě", "Je delší než bunda", "Bývá vlněný"],
-    "KACHNA": ["Pták, který plave na vodě", "Dělá 'káč, káč'", "Má široký zobák", "Její mládě je kachně"],
-    "KALHOTY": ["Oblečení na nohy", "Mají dvě nohavice", "Mohou být džínové nebo plátěné", "Nosíme je skoro každý den"],
-    "KAMEN": ["Tvrdý nerost", "Je součástí skal", "Házíme ho do vody (žabky)", "Stavíme z něj zdi"],
-    "KAPR": ["Ryba, kterou jíme na Vánoce", "Žije v rybníce", "Má velké šupiny a vousky", "Prodává se v kádích"],
-    "KARTA": ["Papírový lístek s obrázkem nebo číslem", "Hrajeme s nimi hry jako Prší nebo Černý Petr", "Je jich celý balíček", "Může být i poštovní pohlednice"],
-    "KLADIVO": ["Nářadí na zatloukání", "Má dřevěnou rukojeť a kovovou hlavu", "Používáme ho na hřebíky", "Tlučeme s ním"],
-    "KLÍČ": ["Kovový nástroj na odemykání", "Strkáme ho do zámku", "Otevírá dveře", "Nosíme ho na kroužku"],
-    "KNIHA": ["Sepsaný příběh nebo informace", "Můžeme si ji půjčit v knihovně", "Má stránky a obal", "Čteme si v ní pohádky"],
-    "KNIHOVNA": ["Místo, kde se půjčují knihy", "Pracuje v ní knihovník/knihovnice", "Musíme v ní být potichu", "Vracíme do ní přečtené knihy"],
-    "KOLO": ["Dopravní prostředek se dvěma koly", "Šlapeme na něm do pedálů", "Musíme na něm držet rovnováhu", "Jezdíme s ním na výlety"],
-    "KOLÁČ": ["Sladké pečivo s náplní", "Může být s tvarohem, mákem nebo ovocem", "Peče ho babička", "Je kulatý nebo hranatý"],
-    "KOLENO": ["Kloub uprostřed nohy", "Ohýbáme díky němu nohu", "Můžeme si ho rozbít", "Spojuje stehno a lýtko"],
-    "KOSTEL": ["Budova, kde se konají bohoslužby", "Má věž a zvony", "Chodí se do něj lidé modlit", "Bývá uprostřed vesnice"],
-    "KOSTKA": ["Kulatý předmět na hraní", "Má šest stran s tečkami", "Házíme s ní při hře Člověče, nezlob se", "Používáme ji pro náhodu"],
-    "KOUPELNA": ["Místnost na mytí", "Je v ní vana nebo sprchový kout", "Čistíme si v ní zuby", "Najdeme v ní zrcadlo"],
-    "KOZA": ["Domácí zvíře, které dává mléko", "Má rohy a bradku", "Dělá 'mééé'", "Žere trávu"],
-    "KOČKA": ["Domácí zvíře, které mňouká", "Loví myši", "Ráda spí na slunci", "Má tichou chůzi"],
-    "KOŠILE": ["Oblečení s límečkem a knoflíky", "Nosí se do divadla nebo na oslavu", "Může mít dlouhý nebo krátký rukáv", "Bývá z bavlny"],
-    "KRÁLÍK": ["Malé zvíře s dlouhýma ušima", "Rád jí mrkev", "Chováme ho v králíkárně", "Umí rychle běhat"],
-    "KRÁVA": ["Velké domácí zvíře, které dává mléko", "Dělá 'búúú'", "Je strakatá (černobílá)", "Žije na farmě"],
-    "KRK": ["Část těla spojující hlavu a trup", "Nosíme na něm šálu", "Drží hlavu", "Bolí nás, když máme angínu"],
-    "KROKODÝL": ["Velký plaz se silnými čelistmi", "Žije v řekách v teplých krajích", "Má dlouhý ocas a tvrdou kůži", "Vypadá jako velká ještěrka"],
-    "KUCHYŇ": ["Místnost, kde se vaří", "Je v ní lednice a sporák", "Připravuje se v ní jídlo", "Myjeme v ní nádobí"],
-    "KUŘE": ["Mládě slepice", "Vylíhne se z vajíčka", "Je malé a žluté", "Dělá 'píp, píp'"],
-    "KVĚT": ["Barevná a voňavá část rostliny", "Včely z něj sbírají nektar", "Dáváme ho pro radost", "Na jaře jich je plno"],
-    "KŘESLO": ["Pohodlné sedadlo pro jednoho", "Mívá opěrky na ruce", "Stojí v obývacím pokoji", "Čteme si v něm knížku"],
-    "KŘÍDA": ["Píšeme s ní na tabuli", "Je bílá nebo barevná", "Práší se z ní", "Snadno se láme"],
-    "KŮŇ": ["Velké zvíře, na kterém se jezdí", "Řehtá a má hřívu", "Žije ve stáji", "Jí oves a seno"],
-    "LABUŤ": ["Velký bílý pták s dlouhým prohnutým krkem", "Plave elegantně na vodě", "Je symbolem krásy", "Mláďata jsou šedá a ošklivá"],
-    "LAMPA": ["Vydává světlo", "Rozsvěcíme ji, když je tma", "Stojí na stole nebo visí u stropu", "Má žárovku"],
-    "LAVICE": ["Stůl a židle dohromady ve škole", "Sedíme v ní při vyučování", "Je pro jednoho nebo pro dva žáky", "Máme v ní sešity a učebnice"],
-    "LEV": ["Velká kočkovitá šelma", "Říká se mu král zvířat", "Samec má velkou hřívu", "Žije v Africe"],
-    "LES": ["Místo plné stromů", "Žijí v něm zvířata", "Chodíme do něj na houby", "Šumí v něm listí"],
-    "LETADLO": ["Dopravní prostředek, který létá", "Má křídla a motory", "Létá vysoko na obloze", "Cestujeme s ním na dovolenou"],
-    "LIŠKA": ["Chytré zvíře s rezavou srstí", "Má huňatý ocas", "Žije v noře", "Loví slepice"],
-    "LOUKA": ["Travnatá plocha plná květin", "V létě na ní bzučí včely", "Pasou se na ní krávy", "Je zelená"],
-    "LOĎ": ["Dopravní prostředek, který pluje po vodě", "Může být malá nebo velká", "Kotví v přístavu", "Pluje po moři nebo po řece"],
-    "LOŽNICE": ["Místnost, kde se spí", "Je v ní postel a skříň", "Večer si v ní čteme pohádku", "Musí v ní být tma a ticho"],
-    "LÁSKA": ["Moc hezký cit", "Máme ji k rodičům, kamarádům", "Srdce je jejím symbolem", "Opak nenávisti"],
-    "LÉKÁRNA": ["Obchod s léky", "Kupujeme v ní prášky a masti", "Pracuje v ní lékárník", "Jdeme do ní s receptem od lékaře"],
-    "LÉTO": ["Nejteplejší roční období", "Chodíme se koupat", "Jíme zmrzlinu", "Jsou velké prázdniny"],
-    "LŽÍCE": ["Příbor na polévku", "Nabíráme s ní tekuté jídlo", "Je oválná", "Jíme s ní i jogurt"],
-    "MALINA": ["Červené nebo růžové ovoce", "Roste na keři s trny", "Je dutá", "Dělá se z ní sladký sirup"],
-    "MASO": ["Jídlo ze zvířat", "Jíme ho pečené, vařené nebo smažené", "Může být kuřecí nebo vepřové", "Je součástí řízku"],
-    "MED": ["Sladká a lepkavá pochoutka", "Vyrábějí ho včely", "Dáváme si ho do čaje, když jsme nemocní", "Je zdravý"],
-    "MEDVĚD": ["Velké a huňaté zvíře", "V zimě spí v brlohu", "Rád jí med", "Může být hnědý nebo bílý (lední)"],
-    "MELOUN": ["Velké kulaté ovoce plné vody", "Je zelený a uvnitř červený", "Jíme ho v létě, když je horko", "Má černá semínka"],
-    "METRO": ["Vlak, který jezdí pod zemí", "Je jen ve velkých městech, jako je Praha", "Vozí hodně lidí", "Má stanice s eskalátory"],
-    "MIKINA": ["Pohodlné oblečení podobné svetru", "Často má kapuci a kapsu na břiše", "Nosíme ji na sport nebo doma", "Je z bavlněného úpletu"],
-    "MLÉKO": ["Bílý nápoj od krávy", "Pijeme ho ráno", "Vyrábí se z něj sýr a jogurt", "Je důležité pro kosti"],
-    "MOST": ["Stavba, která vede přes řeku nebo údolí", "Jezdíme po něm autem nebo vlakem", "Chodíme po něm pěšky", "Spojuje dva břehy"],
-    "MOTORKA": ["Jednostopé vozidlo s motorem", "Je rychlejší než kolo", "Musíme na ní nosit helmu", "Dělá velký hluk"],
-    "MOTÝL": ["Hmyz s barevnými křídly", "Vylíhne se z housenky", "Sedá na květiny", "Létá ve dne"],
-    "MOŘE": ["Velká slaná vodní plocha", "Plaveme v něm o dovolené", "Žijí v něm delfíni a velryby", "Má vlny"],
-    "MRAK": ["Bílý nebo šedý útvar na nebi", "Skládá se z kapiček vody", "Když je tmavý, prší z něj", "Pluje po obloze"],
-    "MRKEV": ["Oranžová kořenová zelenina", "Je zdravá na oči", "Chutná králíkům", "Jíme ji syrovou i vařenou"],
-    "MYŠ": ["Malý hlodavec s dlouhým ocáskem", "Bojí se jí kočka", "Žije na poli nebo v domě", "Ráda jí sýr"],
-    "MÁMA": ["Rodič ženského pohlaví", "Stará se o děti", "Čte pohádky na dobrou noc", "Vaří dobrá jídla"],
-    "MÁSLO": ["Mažeme si ho na chleba", "Vyrábí se z mléka", "Je žluté a měkké", "Ukládáme ho do lednice"],
-    "MÍČ": ["Kulatý předmět na hraní", "Kopeme do něm při fotbale", "Házíme si s ním", "Může být malý nebo velký"],
-    "MĚSÍC": ["Vesmírné těleso, které obíhá Zemi", "Svítí v noci", "Mění svůj tvar (úplněk, srpek)", "Přistáli na něm astronauti"],
-    "NEBE": ["Prostor nad námi", "Ve dne je modré, v noci černé", "Jsou na něm mraky, slunce a hvězdy", "Létají po něm ptáci"],
-    "NEMOCNICE": ["Místo, kde se léčí nemocní lidé", "Pracují v ní lékaři a sestřičky", "Jezdí do ní sanitka", "Ležíme v ní, když jsme nemocní"],
-    "NOHA": ["Část těla, na které stojíme", "Nosíme na ní boty", "Pomáhá nám chodit a běhat", "Máme dvě"],
-    "NOC": ["Část dne, kdy je tma", "Opak dne", "Spíme v ní", "Svítí na nebi měsíc a hvězdy"],
-    "NOS": ["Část obličeje, kterou dýcháme", "Cítíme s ním vůně", "Když máme rýmu, teče z něj", "Je uprostřed obličeje"],
-    "NÁMĚSTÍ": ["Centrální prostranství ve městě", "Bývají na něm domy a obchody", "Často je na něm kašna nebo socha", "Konají se na něm trhy"],
-    "NŮŽ": ["Příbor na krájení", "Je ostrý", "Krájíme s ním maso nebo chleba", "Musíme s ním být opatrní"],
-    "OBCHOD": ["Místo, kde se prodává zboží", "Nakupujeme v něm jídlo nebo oblečení", "Platíme v něm penězi", "Pracuje v něm prodavač"],
-    "OBRÁZEK": ["Nakreslené nebo namalované dílo", "Kreslíme ho pastelkami nebo malujeme barvami", "Můžeme si ho pověsit na zeď", "Je v knížkách"],
-    "OBOČÍ": ["Chloupky nad okem", "Chrání oko před potem", "Můžeme ho zvednout, když se divíme", "Je to výrazný prvek obličeje"],
-    "OHEŇ": ["Hořící plameny", "Hřeje a svítí", "Je horký a nebezpečný", "Opékáme na něm buřty"],
-    "OKNO": ["Skleněná výplň ve zdi domu", "Díváme se jím ven", "Otevíráme ho, abychom větrali", "Myjeme ho, aby bylo čisté"],
-    "OKO": ["Orgán zraku", "Díváme se jím na svět", "Může být modré, hnědé nebo zelené", "Mrkáme jím"],
-    "OKURKA": ["Zelená a podlouhlá zelenina", "Je vodnatá", "Dává se do salátů", "Může být i nakládaná"],
-    "OMÁČKA": ["Tekutá příloha k jídlu", "Může být rajská nebo svíčková", "Poléváme s ní knedlíky nebo těstoviny", "Zahušťuje se moukou"],
-    "OPICE": ["Zvíře podobné člověku", "Ráda jí banány", "Houpe se na stromech", "Žije v pralese"],
-    "OSTROV": ["Pevnina obklopená vodou ze všech stran", "Může být v moři nebo v jezeře", "Dostaneme se na něj lodí nebo letadlem", "Robinson Crusoe žil na jednom takovém"],
-    "OVCE": ["Domácí zvíře, které dává vlnu", "Dělá 'bééé'", "Žije ve stádu", "Její mládě je jehně"],
-    "OŘECH": ["Plod se tvrdou skořápkou", "Musíme ho rozlousknout", "Jí ho veverka", "Dáváme ho do vánočního cukroví"],
-    "PANENKA": ["Hračka v podobě holčičky nebo miminka", "Hrají si s ní hlavně holky", "Oblékáme ji a vozíme v kočárku", "Může mít vlasy, které se dají česat"],
-    "PAPOUŠEK": ["Barevný pták, který umí mluvit", "Má zahnutý zobák", "Žije v teplých krajích", "Chováme ho v kleci"],
-    "PAPRIKA": ["Zelenina různých barev (červená, žlutá, zelená)", "Může být sladká nebo pálivá", "Jíme ji syrovou i pečenou", "Uvnitř má semínka"],
-    "PAVOUK": ["Má osm nohou", "Plete sítě, aby chytil hmyz", "Někteří lidé se ho bojí", "Není to hmyz"],
-    "PEPŘ": ["Černé nebo bílé koření", "Dělá jídlo pálivým", "Kýcháme po něm", "Sůl a ... jsou na každém stole"],
-    "PERO": ["Nástroj na psaní inkoustem", "Potřebujeme ho na domácí úkoly", "Může mít různé barvy", "Píšeme s ním do sešitu"],
-    "PES": ["Domácí zvíře, které štěká", "Nejlepší přítel člověka", "Hlídá dům a zahradu", "Rád aportuje klacky"],
-    "PILA": ["Nářadí na řezání dřeva", "Má zuby", "Pracuje s ní truhlář nebo dřevorubec", "Může být ruční nebo motorová"],
-    "PODLAHA": ["Spodní povrch místnosti", "Chodíme po ní", "Může na ní být koberec, dlažba nebo dřevo", "Uklízíme ji vysavačem nebo mopem"],
-    "PODZIM": ["Roční období po létě", "Listí na stromech je barevné a padá", "Pouštíme draky", "Sklízí se ovoce a zelenina"],
-    "POKOJ": ["Místnost v domě nebo bytě", "Máme v něm hračky a postel", "Hrajeme si v něm", "Je to naše soukromé místo"],
-    "POLÉVKA": ["Tekuté teplé jídlo", "Jíme ji lžící jako první chod", "Může být vývar nebo třeba gulášová", "Často v ní je zelenina nebo nudle"],
-    "POMERANČ": ["Kulaté a oranžové ovoce", "Loupeme ho", "Je plný šťávy", "Roste v teplých krajích"],
-    "PONOŽKY": ["Oblečení na chodidla", "Nosíme je v botách", "Aby nám nebyla zima na nohy", "Máme jich celý pár"],
-    "POSTEL": ["Nábytek, na kterém spíme", "Ležíme v ní v noci", "Má matraci a polštář", "Stojí v ložnici"],
-    "POŠTA": ["Místo, kde se posílají dopisy a balíky", "Kupujeme na ní známky", "Pracuje za přepážkou pošťačka", "Doručuje dopisy"],
-    "POTOK": ["Malá říčka", "Bublá a teče rychleji než řeka", "Žijí v něm raci", "Vede často lesem nebo loukou"],
-    "POČÍTAČ": ["Elektronický stroj na práci i zábavu", "Hrajeme na něm hry a píšeme úkoly", "Má obrazovku, klávesnici a myš", "Připojuje se k internetu"],
-    "PRASE": ["Růžové domácí zvíře", "Dělá 'chrr, chrr'", "Rádo se válí v blátě", "Chováme ho pro maso"],
-    "PRAVÍTKO": ["Školní pomůcka na rýsování rovných čar", "Jsou na něm čísla (centimetry)", "Může být plastové, dřevěné nebo kovové", "Používáme ho v geometrii"],
-    "PRST": ["Je na konci ruky nebo nohy", "Na ruce jich máme pět", "Pomáhají nám uchopovat věci", "Máme na nich nehty"],
-    "PUSA": ["Část obličeje, kterou jíme a mluvíme", "Dáváme s ní pusu", "Máme v ní zuby a jazyk", "Je pod nosem"],
-    "PÁNEV": ["Nádobí na smažení", "Smažíme na ní řízky nebo palačinky", "Má dlouhou rukojeť", "Musí být horká"],
-    "PÁREK": ["Uzenina, kterou jíme s hořčicí", "Často se opéká na ohni", "Vkládá se do rohlíku", "Může být vepřový nebo kuřecí"],
-    "PÍSEK": ["Drobounká zrníčka nerostů", "Je na pláži nebo na hřišti", "Stavíme z něj hrady", "Sype se"],
-    "PÍSEŇ": ["Skladba, která se zpívá", "Má slova a melodii", "Zpíváme si ji pro radost", "Učíme se ji ve škole"],
-    "PÍSMENO": ["Znak pro hlásku", "A, B, C, ...", "Skládáme z nich slova", "Učíme se je ve škole ve slabikáři"],
-    "RADOST": ["Pocit štěstí a veselí", "Máme ji, když dostaneme dárek", "Smějeme se při ní", "Opak smutku"],
-    "RAJČE": ["Červená a kulatá zelenina", "Dělá se z něj kečup", "Roste na keři", "Jíme ho v salátu"],
-    "RAKETA": ["Stroj, který létá do vesmíru", "Startuje s velkým ohněm a kouřem", "Vynáší astronauty na oběžnou dráhu", "Létá nejrychleji ze všeho"],
-    "RODINA": ["Rodiče a děti", "Lidé, kteří spolu žijí", "Máme se v ní rádi", "Pomáháme si"],
-    "ROHLÍK": ["Bílé pečivo zahnutého tvaru", "Jíme ho k snídani", "Může být posypaný mákem nebo solí", "Kupujeme ho v pekárně"],
-    "RUKA": ["Část těla s pěti prsty", "Pomáhá nám uchopit věci", "Máme dvě", "Můžeme s ní malovat"],
-    "RUKAVICE": ["Oblečení na ruce", "Chrání nás před zimou", "Nosíme je při lyžování", "Mají místo pro každý prst"],
-    "RYBA": ["Živočich, který žije ve vodě", "Má šupiny a ploutve", "Dýchá žábrami", "Chytáme ji na udici"],
-    "RYBNÍK": ["Stojatá voda menší než jezero", "Chováme v něm kapry", "V zimě zamrzá a bruslíme na něm", "Žijí v něm žáby"],
-    "RÝŽE": ["Malá bílá zrníčka", "Jí se jako příloha k masu nebo omáčkám", "Roste v Asii na polích pod vodou", "Lepkavá po uvaření"],
-    "RÁNO": ["Začátek dne", "Vstáváme z postele", "Snídáme", "Vychází slunce"],
-    "SALÁM": ["Uzenina, která se krájí na kolečka", "Dáváme si ho na chleba nebo na pizzu", "Je v něm maso a koření", "Kupujeme ho u řezníka"],
-    "SANITKA": ["Auto, které vozí nemocné do nemocnice", "Má modrý maják a houkačku", "Řídí ji záchranář", "Musíme jí na silnici uvolnit cestu"],
-    "SEKUNDA": ["Velmi krátký časový úsek", "Hodina jich má 3600", "Je to okamžik", "Tikot hodin ji odměřuje"],
-    "SESTRA": ["Sourozenec ženského pohlaví", "Holka, která má stejné rodiče", "Půjčuje mi hračky", "Pomáhá mi"],
-    "SEŠIT": ["Do něj si píšeme ve škole", "Má linky nebo čtverečky", "Může být tenký nebo tlustý", "Na každém předmětu máme jiný"],
-    "SILNICE": ["Cesta pro auta", "Je asfaltová", "Musíme se na ní rozhlédnout", "Vede mezi městy a vesnicemi"],
-    "SKŘÍŇ": ["Nábytek na ukládání oblečení", "Má dveře a poličky", "Věšíme do ní ramínka", "Stojí v ložnici nebo v pokoji"],
-    "SLON": ["Velké šedé zvíře s chobotem", "Má velké uši a kly", "Žije v Africe a Asii", "Troubí chobotem"],
-    "SLOVO": ["Skládá se z písmen a má význam", "Používáme je při mluvení a psaní", "Věta se skládá z nich", "Čteme je v knihách"],
-    "SLUNCE": ["Svítí na nebi ve dne", "Velká horká hvězda", "Dává nám teplo a světlo", "Díky němu rostou rostliny"],
-    "SMUTEK": ["Pocit, když jsme nešťastní", "Pláčeme při něm", "Opak radosti", "Máme ho, když se nám něco nepovede"],
-    "SNÍH": ["Bílá pokrývka v zimě", "Padá z nebe v podobě vloček", "Stavíme z něj sněhuláka", "Lyžujeme na něm"],
-    "SPRCHA": ["Zařízení v koupelně na mytí ve stoje", "Teče z ní voda shora", "Je rychlejší než vana", "Používáme při ní sprchový gel"],
-    "STROP": ["Horní část místnosti", "Opak podlahy", "Visí na něm lustr", "Díváme se na něj, když ležíme v posteli"],
-    "STROM": ["Velká rostlina se dřevem a listy", "Dává nám stín a ovoce", "Na podzim shazuje listí", "Stojí v lese nebo v parku"],
-    "STŮL": ["Nábytek, u kterého jíme nebo píšeme", "Stojí v kuchyni nebo v pokoji", "Klademe na něj talíře", "Učíme se u něj"],
-    "SUKNĚ": ["Oblečení pro holky a ženy", "Nosí se na dolní polovině těla", "Může být krátká nebo dlouhá", "Není to kalhoty"],
-    "SVETR": ["Teplé oblečení na horní část těla", "Nosíme ho v zimě", "Je pletený z vlny", "Chrání nás před chladem"],
-    "SŮL": ["Bílé koření, které dává chuť", "Je v mořské vodě", "V pohádce byla nad zlato", "Nesmíme to s ní přehánět"],
-    "SÝR": ["Vyrábí se z mléka", "Může mít díry", "Jíme ho na chlebu nebo na pizze", "Ukládáme ho do lednice"],
-    "TALÍŘ": ["Nádobí, ze kterého jíme", "Je kulatý a plochý", "Máme ho v kuchyni", "Dáváme na něj jídlo"],
-    "TANEC": ["Pohyb do rytmu hudby", "Tancujeme na plese nebo na diskotéce", "Může být pomalý nebo rychlý", "Je to zábava"],
-    "TAŠKA": ["Nosíme v ní věci do školy nebo na nákup", "Má ucha nebo popruh přes rameno", "Může být látková, kožená nebo plastová", "Chrání věci uvnitř"],
-    "TELEFON": ["Přístroj na volání a posílání zpráv", "Můžeme s ním i fotit a hrát hry", "Nosíme ho všude s sebou", "Je 'chytrý'"],
-    "TELEVIZE": ["Přístroj, na kterém sledujeme filmy a pohádky", "Má velkou obrazovku", "Ovládáme ji dálkovým ovladačem", "Je v obývacím pokoji"],
-    "TRIČKO": ["Oblečení na horní část těla", "Má krátké rukávy", "Může mít obrázek", "Nosíme ho v létě"],
-    "TRÁVA": ["Zelená rostlina pokrývající zem", "Roste na louce nebo v parku", "Sečeme ji sekačkou", "Je měkká"],
-    "TUŽKA": ["Nástroj na psaní a kreslení", "Má uvnitř tuhu", "Musíme ji ořezávat", "Lze ji vygumovat"],
-    "TÁTA": ["Rodič mužského pohlaví", "Chodí do práce", "Hraje si s dětmi", "Opravuje věci v domě"],
-    "TĚSTOVINY": ["Jídlo z mouky a vody", "Mohou být špagety, kolínka nebo mašličky", "Vaří se ve vodě", "Jíme je s omáčkou nebo sýrem"],
-    "TŘÍDA": ["Místnost ve škole, kde se učíme", "Je v ní tabule a lavice", "Jsou v ní všichni spolužáci", "Vede ji paní učitelka"],
-    "TYGR": ["Velká kočkovitá šelma s pruhy", "Je oranžovo-černý", "Žije v Asii", "Je to dobrý plavec"],
-    "TÝDEN": ["Má sedm dní", "Začíná pondělím a končí nedělí", "Dva dny z něj jsou víkend", "Chození do školy a práce"],
-    "UCHO": ["Orgán sluchu", "Slyšíme jím zvuky", "Visí nám na něm náušnice", "Máme dvě"],
-    "UČITEL": ["Člověk, který učí ve škole", "Zkouší a dává známky", "Píše na tabuli", "Všechno ví (nebo by měl)"],
-    "UMYVADLO": ["Nádoba v koupelně nebo na záchodě", "Myjeme si v něm ruce", "Je u něj kohoutek s vodou", "Je keramické"],
-    "VANA": ["Velká nádoba na koupání v leže", "Napouštíme si do ní horkou vodu a pěnu", "Je v koupelně", "Je pohodlnější než sprcha"],
-    "VEVERKA": ["Malé zvíře, které skáče po stromech", "Má huňatý ocas", "Louská oříšky", "Staví si hnízdo v dutině stromu"],
-    "VEČER": ["Konec dne", "Zapínáme světla", "Díváme se na televizi nebo si čteme", "Chystáme se do postele"],
-    "VIDLIČKA": ["Příbor se zuby", "Napichujeme s ní jídlo", "Používáme ji při obědě", "Je kovová"],
-    "VLASY": ["Rostou nám na hlavě", "Musíme je česat a mýt", "Mohou být dlouhé, krátké, rovné nebo kudrnaté", "Pan kadeřník je stříhá"],
-    "VLAK": ["Dopravní prostředek, který jezdí po kolejích", "Má vagóny a lokomotivu", "Houká a píská", "Jezdí mezi městy"],
-    "VLK": ["Divoké zvíře podobné psovi", "Žije ve smečce", "V noci vyje na měsíc", "Byl v pohádce o Karkulce"],
-    "VODA": ["Průhledná tekutina k pití", "Najdeme ji v řece nebo v moři", "Je nezbytná pro život", "V zimě zamrzá"],
-    "VZDUCH": ["Plyn, který dýcháme", "Je všude kolem nás", "Je neviditelný", "Potřebujeme ho k životu"],
-    "VČELA": ["Hmyz, který vyrábí med", "Je žlutočerná", "Dělá 'bzzz'", "Může dát žihadlo"],
-    "VĚTA": ["Skládá se ze slov a dává smysl", "Začíná velkým písmenem a končí tečkou", "Říkáme ji nebo píšeme", "Vyjadřuje myšlenku"],
-    "VÍTR": ["Pohybující se vzduch", "Pouštíme při něm draka", "Ohýbá stromy", "Může foukat slabě i silně"],
-    "ZAHRADA": ["Pozemek u domu", "Pěstujeme na ní květiny a zeleninu", "Může na ní být trávník a stromy", "Hrajeme si na ní"],
-    "ZAJÍC": ["Zvíře s dlouhýma ušima a krátkým ocasem", "Rychle běhá po poli", "Je plachý", "Je podobný králíkovi, ale je divoký"],
-    "ZEBRA": ["Africké zvíře podobné koni", "Má černé a bílé pruhy", "Žije ve stádech", "Vypadá jako v pyžamu"],
-    "ZEMĚ": ["Planeta, na které žijeme", "Je kulatá", "Obíhá kolem Slunce", "Je třetí planeta od Slunce"],
-    "ZEĎ": ["Stěna, která tvoří místnost nebo ohraničuje pozemek", "Věšíme na ni obrázky", "Může být z cihel nebo betonu", "Tvoří oporu pro střechu"],
-    "ZIMA": ["Nejchladnější roční období", "Padá sníh", "Stavíme sněhuláky a lyžujeme", "Nosíme teplé oblečení"],
-    "ZMRZLINA": ["Sladká a studená pochoutka", "Jíme ji v létě", "Může být kopečková nebo točená", "Může být ovocná nebo čokoládová"],
-    "ZRCADLO": ["Ukazuje náš odraz", "Díváme se do něj, když se češeme", "Je skleněné a hladké", "Visí v koupelně nebo v předsíni"],
-    "ZUB": ["Jsou v puse a koušeme s nimi jídlo", "Musíme si je čistit kartáčkem", "Když bolí, jdeme k zubaři", "Dospělý jich má 32"],
-    "ZÁCHOD": ["Místnost nebo zařízení na vykonávání potřeby", "Je v něm mísa a splachovadlo", "Musí se po sobě uklízet", "Je v každém bytě"],
-    "ZÁDA": ["Zadní část trupu", "Opíráme se o ně na židli", "Nosíme na nich batoh", "Mohou bolet z těžkých věcí"],
-    "ZÁMEK": ["Sídlo králů nebo šlechticů", "Je to velká a krásná budova", "Často má věže a park", "Navštěvujeme ho jako památku"],
-    "ČAJ": ["Teplý nápoj z bylinek nebo ovoce", "Pijeme ho, když jsme nemocní", "Může být černý, zelený nebo ovocný", "Sladíme si ho medem nebo cukrem"],
-    "ČÁP": ["Velký pták s dlouhýma červenýma nohama", "Nosí prý děti", "Staví si velká hnízda na komínech", "Klape zobákem"],
-    "ČEPICE": ["Pokrývka hlavy", "Nosíme ji v zimě, aby nám nebyla zima na uši", "Může mít bambuli", "Chrání před mrazem"],
-    "ČESNEK": ["Štiplavá zelenina", "Je to přírodní lék proti upírům", "Skládá se ze stroužků", "Dává se do jídla pro výraznou chuť"],
-    "ČÍSLO": ["Znak pro počet", "Jedna, dvě, tři, ...", "Učíme se je ve škole v matematice", "Používáme je při počítání"],
-    "ŠATY": ["Oblečení pro holky a ženy v jednom kuse", "Nosí se v létě nebo na slavnostní příležitosti", "Zakrývají tělo od ramen dolů", "Mohou být barevné a s volánky"],
-    "ŠKOLA": ["Místo, kam se chodí děti učit", "Učí v ní paní učitelka", "Máme v ní lavice a tabuli", "Začíná v září"],
-    "ŠROUB": ["Kovová součástka se závitem", "Zašroubovává se šroubovákem", "Spojuje věci pevněji než hřebík", "Může mít různou hlavičku"],
-    "ŠVESTKA": ["Modré nebo fialové ovoce s peckou", "Roste na stromě", "Dělají se z ní povidla a knedlíky", "Je sladká"],
-    "ŠÁLA": ["Dlouhý kus látky, který se nosí kolem krku", "Nosíme ji v zimě, aby nám nebyla zima", "Může být pletená a barevná", "Zahřeje nás"],
-    "ŘEKA": ["Proudící voda v krajině", "Vlévá se do moře", "Plavou v ní ryby", "Můžeme se v ní koupat"],
-    "ŽÁBA": ["Zelený obojživelník", "Skáče a dělá 'kvák'", "Žije u vody", "Vyvíjí se z pulce"],
-    "ŽÁK": ["Dítě, které chodí do školy", "Učí se psát, číst a počítat", "Nosí domů úkoly a známky", "Sedí v lavici"],
-    "ŽELVA": ["Plaz, který nosí krunýř", "Je velmi pomalá", "Může žít na souši i ve vodě", "Dožívá se vysokého věku"],
-    "ŽIDLE": ["Nábytek na sezení", "Má čtyři nohy a opěradlo", "Stojí u stolu", "Sedíme na ní při jídle"],
-    "ŽIRAFA": ["Nejvyšší zvíře na světě", "Má velmi dlouhý krk", "Živí se listím ze stromů", "Má skvrnitou srst"]
+  "ASTRONAUT": [
+    "Člověk létající do vesmíru",
+    "Má speciální skafandr",
+    "Žije na vesmírné stanici",
+    "Vidí Zemi shora"
+  ],
+  "ATLAS": [
+    "Kniha s mapami",
+    "Jsou v něm země světa",
+    "Používáme ho v zeměpisu",
+    "Ukazuje hranice států"
+  ],
+  "AUTO": [
+    "Dopravní prostředek se čtyřmi koly",
+    "Jezdí po silnici",
+    "Potřebuje benzín nebo elektřinu",
+    "Používáme ho na výlety"
+  ],
+  "AUTOBUS": [
+    "Velké auto pro hodně lidí",
+    "Jezdí po městě a mezi městy",
+    "Nastupujeme do něj na zastávce",
+    "Řídí ho řidič"
+  ],
+  "BABIČKA": [
+    "Matka rodičů",
+    "Peče buchty a koláče",
+    "Vypráví pohádky",
+    "Bydlí na venkově nebo ve městě"
+  ],
+  "BANÁN": [
+    "Žluté a podlouhlé ovoce",
+    "Loupeme ho",
+    "Roste v trsech",
+    "Je měkký a sladký"
+  ],
+  "BAREVNÝ": ["Má barvy", "Není černobílý", "Duha je taková", "Pestrý"],
+  "BARVA": [
+    "Vlastnost světla (červená, modrá, ...)",
+    "Používáme ji při malování",
+    "Svět je jich plný",
+    "Mícháním vznikají nové"
+  ],
+  "BASKETBAL": [
+    "Sport s míčem rukama",
+    "Hází se do koše",
+    "Hraje se v hale",
+    "Koš je vysoko"
+  ],
+  "BATOH": [
+    "Taška nosená na zádech",
+    "Má dva popruhy přes ramena",
+    "Nosíme v něm věci do školy",
+    "Je praktický na výlety"
+  ],
+  "BEZPEČÍ": [
+    "Stav bez nebezpečí",
+    "Nic nám nehrozí",
+    "Jsme v ochraně",
+    "Cítíme se klidně"
+  ],
+  "BOTA": [
+    "Obuv, kterou nosíme na nohách",
+    "Chrání nás před chladem a špínou",
+    "Mohou být sportovní nebo zimní",
+    "Zavazujeme je na tkaničky"
+  ],
+  "BOTY": [
+    "Obuv na nohy",
+    "Chrání před chladem a nečistotami",
+    "Můžou mít tkaničky",
+    "Nosíme je ven"
+  ],
+  "BOUŘE": [
+    "Silný vítr s blesky",
+    "Hřmí a prší",
+    "Je nebezpečná",
+    "Svítí při ní blesky"
+  ],
+  "BRAMBORA": [
+    "Hnědá zelenina, která roste v zemi",
+    "Dělají se z ní hranolky",
+    "Loupe se",
+    "Vaří se jako příloha"
+  ],
+  "BRATR": [
+    "Sourozenec mužského pohlaví",
+    "Kluk, který má stejné rodiče",
+    "Hrajeme si s ním",
+    "Někdy se s ním hádáme"
+  ],
+  "BRUSLENÍ": [
+    "Pohyb na ledě v bruslích",
+    "Klouzeme po ledové ploše",
+    "Můžeme dělat piruety",
+    "Bývá v zimě"
+  ],
+  "BRÝLE": [
+    "Nosíme je na nose, abychom lépe viděli",
+    "Mají skla a obroučky",
+    "Předepisuje je oční lékař",
+    "Mohou být i sluneční"
+  ],
+  "BUBEN": [
+    "Bicí nástroj",
+    "Bubnuje se na něj paličkami",
+    "Je kulatý a dutý",
+    "Dělá rytmus"
+  ],
+  "BUCHTY": [
+    "Sladké pečivo s náplní uvnitř",
+    "Peče se v troubě",
+    "Náplň může být povidlová",
+    "Jsou měkké a nadýchané"
+  ],
+  "BUM": [
+    "Zvuk výbuchu",
+    "Hlasitý náraz",
+    "Když něco spadne",
+    "Dělá to rachot"
+  ],
+  "BUNDA": [
+    "Oblečení proti zimě nebo dešti",
+    "Má dlouhé rukávy a zip",
+    "Nosíme ji na jaře a na podzim",
+    "Může mít kapuci"
+  ],
+  "BZUKOT": ["Zvuk much a včel", "Nepřetržitý zvuk", "Dělá ho hmyz", "Bzzzz"],
+  "BĚH": [
+    "Rychlý pohyb nohama",
+    "Jsme rychlí",
+    "Zadýcháváme se",
+    "Je rychlejší než chůze"
+  ],
+  "BŘICHO": [
+    "Část těla mezi hrudníkem a nohama",
+    "Máme v něm žaludek",
+    "Kručí v něm, když máme hlad",
+    "Je měkké"
+  ],
+  "CELÝ": [
+    "Úplný, bez chybějících částí",
+    "Není rozbitý",
+    "Všechny části dohromady",
+    "Kompletní"
+  ],
+  "CENTIMETR": [
+    "Malá jednotka délky",
+    "Krátce se píše cm",
+    "Deset jich dá decimetr",
+    "Měříme jím krátké věci"
+  ],
+  "CHAMELEON": [
+    "Ještěr, který mění barvy",
+    "Má dlouhý jazyk na chytání hmyzu",
+    "Oči se mu otáčejí nezávisle",
+    "Žije na stromech"
+  ],
+  "CHLADNÝ": [
+    "Nízká teplota",
+    "Není teplý",
+    "V zimě je takové počasí",
+    "Potřebujeme teplé oblečení"
+  ],
+  "CHLEBA": [
+    "Základní potravina z mouky",
+    "Jíme ho s máslem nebo sýrem",
+    "Peče se v pekárně",
+    "Krájí se na krajíce"
+  ],
+  "CHODIDLA": [
+    "Spodní části nohou",
+    "Stojíme na nich",
+    "Máme na nich prsty",
+    "Nosíme na nich boty"
+  ],
+  "CHŮZE": [
+    "Pohyb nohama",
+    "Jdeme pomalu",
+    "Pohybujeme se po zemi",
+    "Je pomalejší než běh"
+  ],
+  "CIBULE": [
+    "Zelenina, která pálí do očí",
+    "Je kulatá a má slupky",
+    "Dává se do guláše",
+    "Může být žlutá nebo červená"
+  ],
+  "CITRON": [
+    "Žluté a kyselé ovoce",
+    "Dáváme si ho do čaje",
+    "Roste na stromě",
+    "Obsahuje vitamín C"
+  ],
+  "CUKR": [
+    "Bílá a sladká látka",
+    "Sladíme s ním čaj nebo koláče",
+    "Je v bonbonech a čokoládě",
+    "Vyrábí se z řepy"
+  ],
+  "DELFÍN": [
+    "Chytré mořské zvíře",
+    "Rád skáče nad hladinu",
+    "Komunikuje pomocí pískání",
+    "Savec žijící v moři"
+  ],
+  "DEN": [
+    "Část dne, kdy je světlo",
+    "Opak noci",
+    "Vstáváme ráno a jdeme spát večer",
+    "Má 24 hodin"
+  ],
+  "DIVADLO": [
+    "Budova pro představení",
+    "Hrají se tam hry",
+    "Má jeviště a hlediště",
+    "Sedíme tam v křeslech"
+  ],
+  "DOBRODRUŽSTVÍ": [
+    "Vzrušující zážitek",
+    "Zažíváme něco nového",
+    "Může být nebezpečné",
+    "Hrdina má vždy jedno"
+  ],
+  "DOLAR": [
+    "Jednotka peněz v Americe",
+    "Krátce se píše $",
+    "Platí se jím v USA",
+    "Zelené bankovky jsou z něj"
+  ],
+  "DOMÁCÍ": [
+    "Úkoly zadané na doma",
+    "Píšeme je večer",
+    "Odevzdáváme je druhý den",
+    "Musíme je udělat"
+  ],
+  "DORT": [
+    "Sladký dezert k narozeninám",
+    "Mívá na sobě svíčky",
+    "Je kulatý a krájí se na dílky",
+    "Často s krémem a ovocem"
+  ],
+  "DOSPĚLÝ": ["Už vyrostl", "Není dítě", "Má plný věk", "Starší než diti"],
+  "DOUPĚ": [
+    "Žluté jarní květiny",
+    "Kvètou brzy na jaře",
+    "Rostou v trsech",
+    "Mají malé květy"
+  ],
+  "DRSNÝ": [
+    "S nerovnostmi",
+    "Opak hladkého",
+    "Škrápe při dotyku",
+    "Smirkový papír je takový"
+  ],
+  "DUHA": [
+    "Barevný oblouk na nebi",
+    "Objevuje se po dešti",
+    "Má sedm barev",
+    "Je krásný jev"
+  ],
+  "DUŠIČKY": [
+    "Svátek vzpomínání na zemřelé",
+    "Chodíme na hřbitov",
+    "Zapalujeme svíčky",
+    "Je v listopadu"
+  ],
+  "DVEŘE": [
+    "Vstup do místnosti nebo domu",
+    "Otevíráme a zavíráme je",
+    "Mají kliku",
+    "Zamykáme je klíčem"
+  ],
+  "DVOJKA": [
+    "Číslo po jedničce",
+    "Píše se jako 2",
+    "Máme dvě oči",
+    "Je to první sudé číslo"
+  ],
+  "DÁMA": [
+    "Desková hra s kameny",
+    "Pohybuje se po čtvercích",
+    "Skoče přes soupeře",
+    "Hrají dva hráči"
+  ],
+  "DÉLKA": [
+    "Jak moc daleko",
+    "Od začátku do konce",
+    "Cesta má několik kilometrů",
+    "Měří se metry"
+  ],
+  "DÉŠŤ": [
+    "Kapky vody padající z nebe",
+    "Nosíme při něm deštník",
+    "Zalévá květiny a trávu",
+    "Dělá kaluže"
+  ],
+  "DÍTĚ": [
+    "Malý člověk, kluk nebo holka",
+    "Chodí do školy nebo do školky",
+    "Hraje si s hračkami",
+    "Roste"
+  ],
+  "DĚDEČEK": [
+    "Otec rodičů",
+    "Nosí brýle a čte noviny",
+    "Učí nás nové věci",
+    "Chodí s námi na procházky"
+  ],
+  "DŘEVO": [
+    "Materiál ze stromů",
+    "Staví se z něj domy",
+    "Je hnědé",
+    "Dá se pilovat"
+  ],
+  "DŮM": [
+    "Místo, kde bydlíme",
+    "Stavba se střechou a okny",
+    "Má několik místností",
+    "Chrání nás před deštěm"
+  ],
+  "DŽUS": [
+    "Nápoj z vymačkaného ovoce",
+    "Může být pomerančový nebo jablečný",
+    "Je zdravý a plný vitamínů",
+    "Pijeme ho k snídani"
+  ],
+  "ELEKTRICKÝ": [
+    "Týkající se elektřiny",
+    "Potřebuje proud",
+    "Svítí nebo se pohybuje",
+    "Má kabel"
+  ],
+  "EURO": [
+    "Jednotka peněz v Evropě",
+    "Krátce se píše €",
+    "Platí se jimi v mnoha zemích",
+    "Zlaté mince jsou z nich"
+  ],
+  "FARMA": [
+    "Místo pro chov zvířat",
+    "Žijí tam krávy a prasata",
+    "Pěstuje se tam obilí",
+    "Je na venkově"
+  ],
+  "FILM": [
+    "Pohyblivé obrázky s příběhem",
+    "Díváme se na něj v kině nebo v televizi",
+    "Může být animovaný nebo hraný",
+    "Jíme u něj popcorn"
+  ],
+  "FLÉTNA": [
+    "Dechový nástroj ze dřeva",
+    "Fouká se do otvoru na straně",
+    "Má díry pro prsty",
+    "Vydává vysoké tóny"
+  ],
+  "FOTBAL": [
+    "Sport s míčem nohama",
+    "Hraje se na trávníku",
+    "Cílem je dát gól",
+    "Hraje ho 11 hráčů"
+  ],
+  "FOTOAPARÁT": [
+    "Přístroj na focení obrázků",
+    "Zachytí okamžik",
+    "Dívá se do něj jedním okem",
+    "Dnes ho máme i v telefonu"
+  ],
+  "FRANCIE": [
+    "Země v Evropě",
+    "Hlavní město je Paříž",
+    "Mluví se tam francouzsky",
+    "Je známá vínem a sýry"
+  ],
+  "FUKY": ["Zvuk větru", "Amikor fouká", "Šumění vzduchu", "Slyšíme ho venku"],
+  "GAUČ": [
+    "Velké pohodlné křeslo pro více lidí",
+    "Stojí v obývacím pokoji",
+    "Díváme se z něj na televizi",
+    "Může být rozkládací"
+  ],
+  "GOMBÍK": [
+    "Malé kulaté zapínání",
+    "Prošívá se přes knoflíkovou dírku",
+    "Je na košilích",
+    "Zapíná oblečení"
+  ],
+  "GRAM": [
+    "Malá jednotka váhy",
+    "Krátce se píše g",
+    "Lehká věc váží málo",
+    "Bonbon váží pár z nich"
+  ],
+  "GUMA": [
+    "Pomůcka na mazání tužky",
+    "Používáme ji, když uděláme chybu",
+    "Je měkká",
+    "Je ve škole nezbytná"
+  ],
+  "HAD": [
+    "Zvíře bez nohou",
+    "Plazí se po zemi",
+    "Může syčet",
+    "Někteří jsou jedovatí"
+  ],
+  "HALLOWEEN": [
+    "Svátek duchů a dýní",
+    "Převlékáme se za strašidla",
+    "Vyřezáváme dýně",
+    "Je 31. října"
+  ],
+  "HARMONIKA": [
+    "Nástroj s bellows",
+    "Táhneme a tlaněíme ji",
+    "Má tlačítka",
+    "Hraje se při tanci"
+  ],
+  "HASIČ": [
+    "Člověk, který hasí požáry",
+    "Jezdí červeným autem",
+    "Zachraňuje lidi",
+    "Nosí ochranný oblek"
+  ],
+  "HEXAGON": [
+    "Geometrický tvar se šesti stranami",
+    "Má šest rohů",
+    "Včelí plásty mají tento tvar",
+    "Někdy se nazývá šestúhelník"
+  ],
+  "HLADKÝ": [
+    "Bez nerovností",
+    "Příjemný na dotek",
+    "Skluznice je taková",
+    "Neškrápe"
+  ],
+  "HLAVA": [
+    "Horní část těla",
+    "Máme na ní vlasy, oči, nos a pusu",
+    "Je v ní mozek",
+    "Nosíme na ní čepici"
+  ],
+  "HLOUBKA": [
+    "Jak moc dovnitř",
+    "Do jaké vzdálenosti",
+    "Studna má velkou",
+    "Měří se metry"
+  ],
+  "HLUBOKÝ": [
+    "Sahá daleko dolů",
+    "Má velkou hloubku",
+    "Studna je taková",
+    "Není mělký"
+  ],
+  "HLUČNÝ": ["S velkým hlukem", "Slyšíme hodně", "Opak tichého", "Rušivý"],
+  "HLÍNA": [
+    "Hnědá zemina",
+    "Můžeme z ní modelovat",
+    "Je mokrá a mazlavá",
+    "Rostou v ní rostliny"
+  ],
+  "HMOTNOST": [
+    "Jak moc něco váží",
+    "Měří se kilogramy",
+    "Peří má malou",
+    "Kámen má velkou"
+  ],
+  "HNĚDÝ": [
+    "Barva země a dřeva",
+    "Má ji čokoláda",
+    "Je to teplá barva",
+    "Najdeme ji v přírodě"
+  ],
+  "HNĚV": [
+    "Silný vztek",
+    "Červenáme se při něm",
+    "Stíská se nám čelist",
+    "Chceme křičet"
+  ],
+  "HODINA": [
+    "Časový úsek 60 minut",
+    "Den jich má 24",
+    "Měří se hodinami",
+    "Ručičky ji ukazují"
+  ],
+  "HODINY": [
+    "Ukazují, kolik je času",
+    "Mají ciferník a ručičky",
+    "Tikají",
+    "Visí na zdi nebo je máme na ruce"
+  ],
+  "HOKEJ": [
+    "Sport s holí a pukem",
+    "Hraje se na ledě",
+    "Hráči mají brusle",
+    "Střílí se na branku"
+  ],
+  "HOLUB": [
+    "Pták, který žije ve městech",
+    "Dělá 'vrkú, vrkú'",
+    "Často sedí na střechách a sochách",
+    "Posílali se s ním dopisy"
+  ],
+  "HORA": [
+    "Velký kopec",
+    "Nejvyšší v Česku je Sněžka",
+    "V zimě na ní lyžujeme",
+    "Jsou na ní skály a lesy"
+  ],
+  "HORKÝ": [
+    "Velmi vysoká teplota",
+    "Ještě teplejší než teplý",
+    "Oheň je takový",
+    "Může nás spálit"
+  ],
+  "HOUSLE": [
+    "Strunný nástroj s smyčcem",
+    "Držíme je pod bradou",
+    "Má čtyři struny",
+    "Hraje se na ně smyčcem"
+  ],
+  "HRAD": [
+    "Pevnost postavená v minulosti",
+    "Chránil před nepřáteli",
+    "Často stojí na kopci",
+    "Mívá hradby a příkop"
+  ],
+  "HRNEC": [
+    "Nádoba na vaření",
+    "Vaříme v něm polévku nebo brambory",
+    "Je velký a kulatý",
+    "Může mít pokličku"
+  ],
+  "HRNEK": [
+    "Nádoba na pití",
+    "Má ouško",
+    "Pijeme z něj čaj nebo kakao",
+    "Může být keramický nebo skleněný"
+  ],
+  "HRUBÝ": [
+    "Nehladký a nepříjemný",
+    "Opak jemného",
+    "Nepříjemný na dotek",
+    "Drsný a tvrdý"
+  ],
+  "HRUŠKA": [
+    "Ovoce ve tvaru zvonu",
+    "Roste na stromě",
+    "Je sladká",
+    "Může být zelená nebo žlutá"
+  ],
+  "HUDBA": [
+    "Zvuky a melodie",
+    "Posloucháme ji z rádia nebo z telefonu",
+    "Může být veselá nebo smutná",
+    "Hrají ji hudební nástroje"
+  ],
+  "HUS": [
+    "Velký bílý pták s dlouhým krkem",
+    "Dělá 'ga, ga'",
+    "Plave na rybníce",
+    "Je podobná kachně, ale větší"
+  ],
+  "HVĚZDA": [
+    "Svítící bod na noční obloze",
+    "Obrovské slunce daleko od nás",
+    "Tvoří souhvězdí",
+    "Nejznámější je Polárka"
+  ],
+  "HVĚZDY": [
+    "Svítící body na noční obloze",
+    "Jsou velmi daleko",
+    "Tvoří obrázky",
+    "Počítáme je v noci"
+  ],
+  "HŘEBÍK": [
+    "Malý kovový hrot",
+    "Zatloukáme ho kladivem",
+    "Spojuje se s ním dřevo",
+    "Věšíme na něj obrázky"
+  ],
+  "HŘIŠTĚ": [
+    "Místo na hraní venku",
+    "Bývá na něm písek, houpačky a skluzavka",
+    "Hrajeme si na něm s kamarády",
+    "Musíme na něm být opatrní"
+  ],
+  "ITÁLIE": [
+    "Země ve tvaru boty",
+    "Hlavní město je Řím",
+    "Mluví se tam italsky",
+    "Vynalezli tam pizzu"
+  ],
+  "JABLKO": [
+    "Kulaté ovoce",
+    "Může být červené nebo zelené",
+    "Roste na stromě",
+    "Je sladké a šťavnaté"
+  ],
+  "JAHODA": [
+    "Malé červené ovoce",
+    "Roste na zemi",
+    "Má na sobě zelenou čepičku a tečky",
+    "Dáváme si ji se šlehačkou"
+  ],
+  "JAPONSKO": [
+    "Ostrovní země v Asii",
+    "Hlavní město je Tokio",
+    "Mluví se tam japonsky",
+    "Jsou odtud samuraji"
+  ],
+  "JARO": [
+    "Jedno ze čtyř ročních období",
+    "Příroda se probouzí",
+    "Kvetou stromy a květiny",
+    "Začíná na jaře"
+  ],
+  "JASNÝ": ["Dobře viditelný", "Světlý", "Rozumíme tomu", "Zřetelný"],
+  "JAZYK": [
+    "Měkká část v ústech",
+    "Chutnáme jím",
+    "Mluvíme díky němu",
+    "Je růžový"
+  ],
+  "JEDLE": [
+    "Stále zelené jehličnatné stromy",
+    "Mají jehličky místo listů",
+    "Na Vánoce je ozdobujeme",
+    "Rostou v lese"
+  ],
+  "JEDNIČKA": [
+    "Nejmenší kladné číslo",
+    "Píše se jako 1",
+    "Je první v řadě",
+    "Začíná se jí počítání"
+  ],
+  "JEDNODUCHOST": [
+    "Když je něco lehké",
+    "Rozumíme tomu",
+    "Není komplikované",
+    "Snadno se dělá"
+  ],
+  "JEHLA": [
+    "Tenká špička na šití",
+    "Má díru pro nitku",
+    "Prošívá látku",
+    "Je ostrá"
+  ],
+  "JELEN": [
+    "Velké lesní zvíře s parožím",
+    "Říká se mu král lesa",
+    "V zimě shazuje paroží",
+    "Žije v lese"
+  ],
+  "JEMNÝ": [
+    "Velmi hladký a příjemný",
+    "Hedvábí je takové",
+    "Příjemné na dotek",
+    "Měkké a hladké"
+  ],
+  "JESKYNĚ": [
+    "Díra ve skále nebo pod zemí",
+    "Bývá v ní tma a zima",
+    "Žili v ní pravěcí lidé",
+    "Jsou v ní krápníky"
+  ],
+  "JEZERO": [
+    "Velká přírodní nádrž se sladkou vodou",
+    "Je větší než rybník",
+    "Můžeme se v něm koupat a jezdit na lodi",
+    "Největší u nás je Lipno"
+  ],
+  "JEŽEK": [
+    "Malé zvíře s bodlinami",
+    "Když se bojí, schoulí se do klubíčka",
+    "V noci loví hmyz",
+    "Na zimu se ukládá k spánku"
+  ],
+  "JMENINY": [
+    "Svátek našeho jména",
+    "Má ho každé jméno",
+    "Najdeme je v kalendáři",
+    "Gratulujeme"
+  ],
+  "JOGURT": [
+    "Bílý mléčný výrobek",
+    "Je kyselý",
+    "Může mít ovocnou příchuť",
+    "Je zdravý"
+  ],
+  "JÍDLO": [
+    "To, co jíme",
+    "Dává nám energii",
+    "Snídaně, oběd, večeře",
+    "Může být sladké nebo slané"
+  ],
+  "KABELKA": [
+    "Taška pro holky a ženy",
+    "Nosí se v ruce nebo na rameni",
+    "Jsou v ní peníze a kosmetika",
+    "Má zip nebo zápínku"
+  ],
+  "KABÁT": [
+    "Teplé svrchní oblečení",
+    "Nosíme ho v zimě",
+    "Je delší než bunda",
+    "Bývá vlněný"
+  ],
+  "KACHNA": [
+    "Pták, který plave na vodě",
+    "Dělá 'káč, káč'",
+    "Má široký zobák",
+    "Její mládě je kachně"
+  ],
+  "KAKAEN": [
+    "Hnědý horký nápoj",
+    "Děláme ho z prášku a mléka",
+    "Je sladký",
+    "Pijeme ho v zimě"
+  ],
+  "KALHOTY": [
+    "Oblečení na nohy",
+    "Mají dvě nohavice",
+    "Mohou být džínové nebo plátěné",
+    "Nosíme je skoro každý den"
+  ],
+  "KALKULAČKA": [
+    "Stroj na počítání",
+    "Má tlačítka s čísly",
+    "Pomáhá s matematika",
+    "Zobrazuje výsledky"
+  ],
+  "KAMEN": [
+    "Tvrdý nerost",
+    "Je součástí skal",
+    "Házíme ho do vody (žabky)",
+    "Stavíme z něj zdi"
+  ],
+  "KAMION": [
+    "Velké nákladní auto",
+    "Vozí těžké náklady",
+    "Má mnoho kol",
+    "Jezdí po dálnicích"
+  ],
+  "KANVY": [
+    "Nádoby na zalévání",
+    "Mají dlouhé nosík",
+    "Zalýváme jimi květiny",
+    "Voda z nich teče"
+  ],
+  "KAPESNÍK": [
+    "Malá látka na utírání",
+    "Nosíme ho v kapse",
+    "Utíráme si jím nos",
+    "Může být papírový"
+  ],
+  "KAPR": [
+    "Ryba, kterou jíme na Vánoce",
+    "Žije v rybníce",
+    "Má velké šupiny a vousky",
+    "Prodává se v kádích"
+  ],
+  "KARNEVAL": [
+    "Svátek masek a převleku",
+    "Převlékáme se za různé postavy",
+    "Tancujeme a zpíváme",
+    "Je v únoru"
+  ],
+  "KARTA": [
+    "Papírový lístek s obrázkem nebo číslem",
+    "Hrajeme s nimi hry jako Prší nebo Černý Petr",
+    "Je jich celý balíček",
+    "Může být i poštovní pohlednice"
+  ],
+  "KARTY": [
+    "Hry s papírovými lístky",
+    "Mají barvy a čísla",
+    "Hrají se různé hry",
+    "Můžeme je míchýat"
+  ],
+  "KILOGRAM": [
+    "Základní jednotka váhy",
+    "Krátce se píše kg",
+    "Tisíc gramů",
+    "Litr vody váží jeden"
+  ],
+  "KILOMETR": [
+    "Dlouhá jednotka délky",
+    "Krátce se píše km",
+    "Tisíc metrů",
+    "Měříme jím vzdálenosti"
+  ],
+  "KINO": [
+    "Budova pro filmy",
+    "Promítají se tam filmy",
+    "Má velké plátno",
+    "Jíme tam popcorn"
+  ],
+  "KLADIVA": [
+    "Nástroje na zatloukání",
+    "Mají kovovou hlavu",
+    "Zatlouká se jimi hřebíky",
+    "Mají dřevěnou rukojeť"
+  ],
+  "KLADIVO": [
+    "Nářadí na zatloukání",
+    "Má dřevěnou rukojeť a kovovou hlavu",
+    "Používáme ho na hřebíky",
+    "Tlučeme s ním"
+  ],
+  "KLAVÍR": [
+    "Velký klávesový nástroj",
+    "Má černé a bílé klávesy",
+    "Hraje se prsty",
+    "Stojí v hudební škole"
+  ],
+  "KLEŠTĚ": [
+    "Nástroje na uchopení",
+    "Úsťkají jako zobák",
+    "Drží malé předměty",
+    "Stiskneme rukou"
+  ],
+  "KLOBOUK": [
+    "Pokrývka hlavy s kšiltem",
+    "Chrání před sluncem",
+    "Nosili ho pánové",
+    "Má krempu dokola"
+  ],
+  "KLÍČ": [
+    "Kovový nástroj na odemykání",
+    "Strkáme ho do zámku",
+    "Otevírá dveře",
+    "Nosíme ho na kroužku"
+  ],
+  "KLÍČEK": [
+    "Malý klíč",
+    "Odemyká malé zámky",
+    "Nosíme ho na krku",
+    "Může být ozdobný"
+  ],
+  "KMENY": [
+    "Silné části stromů",
+    "Rostou z nich větve",
+    "Jsou dřevěné",
+    "Mají kůru"
+  ],
+  "KNIHA": [
+    "Sepsaný příběh nebo informace",
+    "Můžeme si ji půjčit v knihovně",
+    "Má stránky a obal",
+    "Čteme si v ní pohádky"
+  ],
+  "KNIHOVNA": [
+    "Místo, kde se půjčují knihy",
+    "Pracuje v ní knihovník/knihovnice",
+    "Musíme v ní být potichu",
+    "Vracíme do ní přečtené knihy"
+  ],
+  "KOBERCE": [
+    "Textilní pokrývky podlahy",
+    "Jsou měkké pod nohama",
+    "Moją být barevné",
+    "Vysávám se"
+  ],
+  "KOLENA": [
+    "Klouby uprostřed nohou",
+    "Ohýbáme jimi nohy",
+    "Můžeme si je rozbít",
+    "Spojují stehna s lýtky"
+  ],
+  "KOLENO": [
+    "Kloub uprostřed nohy",
+    "Ohýbáme díky němu nohu",
+    "Můžeme si ho rozbít",
+    "Spojuje stehno a lýtko"
+  ],
+  "KOLO": [
+    "Dopravní prostředek se dvěma koly",
+    "Šlapeme na něm do pedálů",
+    "Musíme na něm držet rovnováhu",
+    "Jezdíme s ním na výlety"
+  ],
+  "KOLOBĚŽKA": [
+    "Jednoduché vozítko s koly",
+    "Odstrková se nohou",
+    "Je lehčí než kolo",
+    "Má řídítka"
+  ],
+  "KOLÁČ": [
+    "Sladké pečivo s náplní",
+    "Může být s tvarohem, mákem nebo ovocem",
+    "Peče ho babička",
+    "Je kulatý nebo hranatý"
+  ],
+  "KOLÁČE": [
+    "Сладké pečivo s náplní",
+    "Peče je babička",
+    "Mohou být s mákem nebo tvarohem",
+    "Jíme je k čaji"
+  ],
+  "KOLÍK": [
+    "Malá tyčinka",
+    "Zašroubovává se nebo zatlouká",
+    "Drží věci pohromadě",
+    "Může být dřevěný"
+  ],
+  "KOMETA": [
+    "Vesmírné těleso s ocasem",
+    "Přilétá občas k Slunci",
+    "Má dlouhý světlý ocas",
+    "Vypadá jako hvězda s ocasem"
+  ],
+  "KOMODA": [
+    "Nízká skříň se zásuvkami",
+    "Ukládáme do ní oblečení",
+    "Stojí často v ložnici",
+    "Má několik pater"
+  ],
+  "KONEC": [
+    "Poslední část",
+    "Když něco končí",
+    "Opak začátku",
+    "Vše má nějaký"
+  ],
+  "KOPRETINY": [
+    "Bílé květiny se žlutým středem",
+    "Rostou na louce",
+    "Trhema jim okvětní lístky",
+    "Říkáme si věštbu"
+  ],
+  "KORUNA": [
+    "Jednotka peněz v Česku",
+    "Krátce se píše Kč",
+    "Platíme jimi v obchodě",
+    "Máme jich mince a bankovky"
+  ],
+  "KOSOČTVEREC": [
+    "Geometrický tvar se čtyřmi stranami",
+    "Strany jsou stejně dlouhé",
+    "Nevypadá jako čtverec",
+    "Je nakřivo"
+  ],
+  "KOSTEL": [
+    "Budova, kde se konají bohoslužby",
+    "Má věž a zvony",
+    "Chodí se do něj lidé modlit",
+    "Bývá uprostřed vesnice"
+  ],
+  "KOSTKA": [
+    "Kulatý předmět na hraní",
+    "Má šest stran s tečkami",
+    "Házíme s ní při hře Člověče, nezlob se",
+    "Používáme ji pro náhodu"
+  ],
+  "KOTNÍKY": [
+    "Klouby při chodidlech",
+    "Ohýbáme jimi chodidla",
+    "Můžou otéci",
+    "Jsou mezi lýtky a chodidly"
+  ],
+  "KOUPELNA": [
+    "Místnost na mytí",
+    "Je v ní vana nebo sprchový kout",
+    "Čistíme si v ní zuby",
+    "Najdeme v ní zrcadlo"
+  ],
+  "KOV": [
+    "Tvrdý lesklý materiál",
+    "Dělají se z něj nástroje",
+    "Je studený na dotek",
+    "Může rznět"
+  ],
+  "KOZA": [
+    "Domácí zvíře, které dává mléko",
+    "Má rohy a bradku",
+    "Dělá 'mééé'",
+    "Žere trávu"
+  ],
+  "KOČKA": [
+    "Domácí zvíře, které mňouká",
+    "Loví myši",
+    "Ráda spí na slunci",
+    "Má tichou chůzi"
+  ],
+  "KOŘENY": [
+    "Část stromu pod zemí",
+    "Rostlina jimi čerpá vodu",
+    "Drží strom v zemi",
+    "Nejsou vidět"
+  ],
+  "KOŠILE": [
+    "Oblečení s límečkem a knoflíky",
+    "Nosí se do divadla nebo na oslavu",
+    "Může mít dlouhý nebo krátký rukáv",
+    "Bývá z bavlny"
+  ],
+  "KOŤATA": [
+    "Malé kočky",
+    "Jsou roztomilá a chlupatá",
+    "Mají malé tlapky",
+    "Pijí mléko od matky"
+  ],
+  "KRASLICE": [
+    "Zdobená vejce o Velikonocích",
+    "Malujeme na ně vzory",
+    "Jsou barevná",
+    "Dáváme je do košíčku"
+  ],
+  "KRK": [
+    "Část těla spojující hlavu a trup",
+    "Nosíme na něm šálu",
+    "Drží hlavu",
+    "Bolí nás, když máme angínu"
+  ],
+  "KROKODÝL": [
+    "Velký plaz se silnými čelistmi",
+    "Žije v řekách v teplých krajích",
+    "Má dlouhý ocas a tvrdou kůži",
+    "Vypadá jako velká ještěrka"
+  ],
+  "KRUH": [
+    "Geometrický tvar bez rohů",
+    "Je úplně kulatý",
+    "Všude má stejnou vzdálenost od středu",
+    "Míč má tento tvar"
+  ],
+  "KRUŽÍTKO": [
+    "Pomůcka na rýsování kruhů",
+    "Má dva konce",
+    "Jedno místo má tužku",
+    "Používá se v geometrii"
+  ],
+  "KRÁLÍK": [
+    "Malé zvíře s dlouhýma ušima",
+    "Rád jí mrkev",
+    "Chováme ho v králíkárně",
+    "Umí rychle běhat"
+  ],
+  "KRÁVA": [
+    "Velké domácí zvíře, které dává mléko",
+    "Dělá 'búúú'",
+    "Je strakatá (černobílá)",
+    "Žije na farmě"
+  ],
+  "KUCHAŘ": [
+    "Člověk, který umí vařit",
+    "Připravuje jídla",
+    "Nosí bílou čepici",
+    "Pracuje v kuchyni"
+  ],
+  "KUCHYŇ": [
+    "Místnost, kde se vaří",
+    "Je v ní lednice a sporák",
+    "Připravuje se v ní jídlo",
+    "Myjeme v ní nádobí"
+  ],
+  "KUKUŘICE": [
+    "Vysoká rostlina se zlatými palicemi",
+    "Roste v polích",
+    "Můžeme ji vařit",
+    "Palice mají zrna"
+  ],
+  "KUŘE": [
+    "Mládě slepice",
+    "Vylíhne se z vajíčka",
+    "Je malé a žluté",
+    "Dělá 'píp, píp'"
+  ],
+  "KUŽEL": [
+    "Geometrický tvar s vrcholem",
+    "Je to trojrozměrný tvar",
+    "Má kruhovou základnu",
+    "Nanuk má tento tvar"
+  ],
+  "KVĚT": [
+    "Barevná a voňavá část rostliny",
+    "Včely z něj sbírají nektar",
+    "Dáváme ho pro radost",
+    "Na jaře jich je plno"
+  ],
+  "KYTARA": [
+    "Strunný nástroj s otvorem",
+    "Má šest strun",
+    "Drží se v náručí",
+    "Hraje se prsty"
+  ],
+  "KÝBLE": [
+    "Nádoby na vodu",
+    "Nosíme v nich tekutiny",
+    "Mají ouško",
+    "Můžou být plastové"
+  ],
+  "KŘESLO": [
+    "Pohodlné sedadlo pro jednoho",
+    "Mívá opěrky na ruce",
+    "Stojí v obývacím pokoji",
+    "Čteme si v něm knížku"
+  ],
+  "KŘÍDA": [
+    "Píšeme s ní na tabuli",
+    "Je bílá nebo barevná",
+    "Práší se z ní",
+    "Snadno se láme"
+  ],
+  "KŮZLATA": [
+    "Malé kozy",
+    "Skáčou a poskakují",
+    "Jsou hravé",
+    "Pijí kozí mléko"
+  ],
+  "KŮŇ": [
+    "Velké zvíře, na kterém se jezdí",
+    "Řehtá a má hřívu",
+    "Žije ve stáji",
+    "Jí oves a seno"
+  ],
+  "KŮŽE": [
+    "Materiál ze zvířat",
+    "Dělají se z ní boty",
+    "Je hnědá nebo černá",
+    "Je pevná"
+  ],
+  "LABUŤ": [
+    "Velký bílý pták s dlouhým prohnutým krkem",
+    "Plave elegantně na vodě",
+    "Je symbolem krásy",
+    "Mláďata jsou šedá a ošklivá"
+  ],
+  "LAMPA": [
+    "Vydává světlo",
+    "Rozsvěcíme ji, když je tma",
+    "Stojí na stole nebo visí u stropu",
+    "Má žárovku"
+  ],
+  "LASKAVOST": [
+    "Milé chování k druhým",
+    "Pomáháme ostatním",
+    "Jsme hodní",
+    "Děláme dobré skutky"
+  ],
+  "LAVICE": [
+    "Stůl a židle dohromady ve škole",
+    "Sedíme v ní při vyučování",
+    "Je pro jednoho nebo pro dva žáky",
+    "Máme v ní sešity a učebnice"
+  ],
+  "LEDI": [
+    "Velcí kočkovití predátoři",
+    "Žijí ve smečce",
+    "Samci mají hřívu",
+    "Řvou v noci"
+  ],
+  "LEDNICE": [
+    "Spotřebič na uchovávání jídla",
+    "Udržuje jídlo studené",
+    "Má dvířka",
+    "Bzučí při chodu"
+  ],
+  "LEHKOST": [
+    "Když něco málo váží",
+    "Opak těžkosti",
+    "Peří má tuto vlastnost",
+    "Snadno se zvedne"
+  ],
+  "LES": [
+    "Místo plné stromů",
+    "Žijí v něm zvířata",
+    "Chodíme do něj na houby",
+    "Šumí v něm listí"
+  ],
+  "LESKLÝ": [
+    "Odráží světlo",
+    "Má lesk",
+    "Zrcadlo je takové",
+    "Můžeme se v něm vidět"
+  ],
+  "LETADLO": [
+    "Dopravní prostředek, který létá",
+    "Má křídla a motory",
+    "Létá vysoko na obloze",
+    "Cestujeme s ním na dovolenou"
+  ],
+  "LETIŠTĚ": [
+    "Místo pro letadla",
+    "Vzlétají odtud letadla",
+    "Má dlouhé dráhy",
+    "Cestujem tam na dovolenou"
+  ],
+  "LEV": [
+    "Velká kočkovitá šelma",
+    "Říká se mu král zvířat",
+    "Samec má velkou hřívu",
+    "Žije v Africe"
+  ],
+  "LIMONÁDA": [
+    "Sladký nápoj s příchutí",
+    "Může být citrónová nebo pomerančová",
+    "Je studená a osvěžující",
+    "Pijeme ji v létě"
+  ],
+  "LISTY": [
+    "Zelené části rostlin",
+    "Dýchá jimi rostlina",
+    "Na podzim žloutnou",
+    "Padají ze stromů"
+  ],
+  "LIŠKA": [
+    "Chytré zvíře s rezavou srstí",
+    "Má huňatý ocas",
+    "Žije v noře",
+    "Loví slepice"
+  ],
+  "LOPATY": [
+    "Nástroje na kopání",
+    "Mají kovový končec",
+    "Kopáme jimi zahradu",
+    "Mají dlouhé držadlo"
+  ],
+  "LOUKA": [
+    "Travnatá plocha plná květin",
+    "V létě na ní bzučí včely",
+    "Pasou se na ní krávy",
+    "Je zelená"
+  ],
+  "LOĎ": [
+    "Dopravní prostředek, který pluje po vodě",
+    "Může být malá nebo velká",
+    "Kotví v přístavu",
+    "Pluje po moři nebo po řece"
+  ],
+  "LOŽNICE": [
+    "Místnost, kde se spí",
+    "Je v ní postel a skříň",
+    "Večer si v ní čteme pohádku",
+    "Musí v ní být tma a ticho"
+  ],
+  "LUSTRY": [
+    "Svítidla visící ze stropu",
+    "Osvětlují místnost",
+    "Mohou být křišťálové",
+    "Jsou ozdobné"
+  ],
+  "LYŽOVÁNÍ": [
+    "Zimní sport na svahu",
+    "Jezdíme na lyžích",
+    "Potřebujeme sníh",
+    "Jezdíme ze svahu dolů"
+  ],
+  "LÁSKA": [
+    "Moc hezký cit",
+    "Máme ji k rodičům, kamarádům",
+    "Srdce je jejím symbolem",
+    "Opak nenávisti"
+  ],
+  "LÁTKA": [
+    "Materiál na oblečení",
+    "Může být bavlněná",
+    "Šije se z ní",
+    "Je měkká"
+  ],
+  "LÉKAŘ": [
+    "Člověk, který léčí nemocné",
+    "Má bílý plášť",
+    "Pracuje v nemocnici",
+    "Předepisuje léky"
+  ],
+  "LÉKÁRNA": [
+    "Obchod s léky",
+    "Kupujeme v ní prášky a masti",
+    "Pracuje v ní lékárník",
+    "Jdeme do ní s receptem od lékaře"
+  ],
+  "LÉTO": [
+    "Nejteplejší roční období",
+    "Chodíme se koupat",
+    "Jíme zmrzlinu",
+    "Jsou velké prázdniny"
+  ],
+  "LÍSTEK": [
+    "Malý kus papíru",
+    "Píšeme na něj vzkazy",
+    "Může být vstupní",
+    "Dáváme ho kamarádovi"
+  ],
+  "LÍTRU": [
+    "Jednotka objemu tekutin",
+    "Krátce se píše l",
+    "Vejde se do plastové láhve",
+    "Mléka koupíme jeden"
+  ],
+  "LŽÍCE": [
+    "Příbor na polévku",
+    "Nabíráme s ní tekuté jídlo",
+    "Je oválná",
+    "Jíme s ní i jogurt"
+  ],
+  "MALINA": [
+    "Červené nebo růžové ovoce",
+    "Roste na keři s trny",
+    "Je dutá",
+    "Dělá se z ní sladký sirup"
+  ],
+  "MALOVÁNÍ": [
+    "Tvorba obrazů",
+    "Používáme štětce",
+    "Míchame barvy",
+    "Malujeme na plátno"
+  ],
+  "MALÍŘ": [
+    "Člověk, který maluje",
+    "Používá štětce a barvy",
+    "Maluje obrazy nebo stěny",
+    "Má často špinavé ruce"
+  ],
+  "MALÝ": [
+    "Má málo místa",
+    "Opak velkého",
+    "Vejde se do ruky",
+    "Je menší než ostatní"
+  ],
+  "MARMELÁDA": [
+    "Sladká pomazánka z ovoce",
+    "Mažeme si ji na chleba",
+    "Může být meruňková",
+    "Je hustá a lepkavá"
+  ],
+  "MASO": [
+    "Jídlo ze zvířat",
+    "Jíme ho pečené, vařené nebo smažené",
+    "Může být kuřecí nebo vepřové",
+    "Je součástí řízku"
+  ],
+  "MATNÝ": ["Neodráží světlo", "Opak lesklého", "Nemá lesk", "Světlo pohlcuje"],
+  "MED": [
+    "Sladká a lepkavá pochoutka",
+    "Vyrábějí ho včely",
+    "Dáváme si ho do čaje, když jsme nemocní",
+    "Je zdravý"
+  ],
+  "MEDVĚD": [
+    "Velké a huňaté zvíře",
+    "V zimě spí v brlohu",
+    "Rád jí med",
+    "Může být hnědý nebo bílý (lední)"
+  ],
+  "MELOUN": [
+    "Velké kulaté ovoce plné vody",
+    "Je zelený a uvnitř červený",
+    "Jíme ho v létě, když je horko",
+    "Má černá semínka"
+  ],
+  "METLE": [
+    "Nástroje na zametání",
+    "Mají štětiny",
+    "Uklízíme jimi podlahu",
+    "Můžou být z proutí"
+  ],
+  "METR": [
+    "Základní jednotka délky",
+    "Krátce se píše m",
+    "Sto centimetrů",
+    "Asi výška dospělého člověka"
+  ],
+  "METRO": [
+    "Vlak, který jezdí pod zemí",
+    "Je jen ve velkých městech, jako je Praha",
+    "Vozí hodně lidí",
+    "Má stanice s eskalátory"
+  ],
+  "MIKINA": [
+    "Pohodlné oblečení podobné svetru",
+    "Často má kapuci a kapsu na břiše",
+    "Nosíme ji na sport nebo doma",
+    "Je z bavlněného úpletu"
+  ],
+  "MIKROVLNKA": [
+    "Spotřebič na ohřívání jídla",
+    "Ohřeje jídlo rychle",
+    "Svítí uvnitř",
+    "Pipne, když je hotovo"
+  ],
+  "MIKULÁŠ": [
+    "Svátek sv. Mikuláše",
+    "Přijdou Mikuláš, anděl a čert",
+    "Dostáváme sladkosti",
+    "Je 6. prosince"
+  ],
+  "MINUTA": [
+    "Časový úsek kratší než hodina",
+    "Má 60 sekund",
+    "Ručička hodin ji ukazuje",
+    "Je část hodiny"
+  ],
+  "MLADÝ": ["Krátce žijící", "Není starý", "Má málo let", "Ještě roste"],
+  "MLÉKO": [
+    "Bílý nápoj od krávy",
+    "Pijeme ho ráno",
+    "Vyrábí se z něj sýr a jogurt",
+    "Je důležité pro kosti"
+  ],
+  "MOKRÝ": [
+    "S vodou",
+    "Opak suchého",
+    "Po dešti jsme takoví",
+    "Musíme se osušit"
+  ],
+  "MOST": [
+    "Stavba, která vede přes řeku nebo údolí",
+    "Jezdíme po něm autem nebo vlakem",
+    "Chodíme po něm pěšky",
+    "Spojuje dva břehy"
+  ],
+  "MOTORKA": [
+    "Jednostopé vozidlo s motorem",
+    "Je rychlejší než kolo",
+    "Musíme na ní nosit helmu",
+    "Dělá velký hluk"
+  ],
+  "MOTORKY": [
+    "Rychlá vozidla na dvou kolech",
+    "Jsou hlučnější než kola",
+    "Jezdec musí mít helmu",
+    "Mají motor"
+  ],
+  "MOTÝL": [
+    "Hmyz s barevnými křídly",
+    "Vylíhne se z housenky",
+    "Sedá na květiny",
+    "Létá ve dne"
+  ],
+  "MOŘE": [
+    "Velká slaná vodní plocha",
+    "Plaveme v něm o dovolené",
+    "Žijí v něm delfíni a velryby",
+    "Má vlny"
+  ],
+  "MRAK": [
+    "Bílý nebo šedý útvar na nebi",
+    "Skládá se z kapiček vody",
+    "Když je tmavý, prší z něj",
+    "Pluje po obloze"
+  ],
+  "MRKEV": [
+    "Oranžová kořenová zelenina",
+    "Je zdravá na oči",
+    "Chutná králíkům",
+    "Jíme ji syrovou i vařenou"
+  ],
+  "MUZEUM": [
+    "Budova se starými věcmi",
+    "Můžeme se tam učit historii",
+    "Jsou tam památky",
+    "Platíme vstupné"
+  ],
+  "MYČKA": [
+    "Spotřebič na mytí nádobí",
+    "Myjí se v ní talíře",
+    "Pridáváme tablety",
+    "Stříká v ní voda"
+  ],
+  "MYŠ": [
+    "Malý hlodavec s dlouhým ocáskem",
+    "Bojí se jí kočka",
+    "Žije na poli nebo v domě",
+    "Ráda jí sýr"
+  ],
+  "MYŠI": [
+    "Malí hlodavci s dlouhými ocásky",
+    "Bojí se jich kočky",
+    "Žijí na polích nebo v domech",
+    "Rády jí sýr"
+  ],
+  "MÁMA": [
+    "Rodič ženského pohlaví",
+    "Stará se o děti",
+    "Čte pohádky na dobrou noc",
+    "Vaří dobrá jídla"
+  ],
+  "MÁSLO": [
+    "Mažeme si ho na chleba",
+    "Vyrábí se z mléka",
+    "Je žluté a měkké",
+    "Ukládáme ho do lednice"
+  ],
+  "MÍČ": [
+    "Kulatý předmět na hraní",
+    "Kopeme do něm při fotbale",
+    "Házíme si s ním",
+    "Může být malý nebo velký"
+  ],
+  "MĚLKÝ": [
+    "Sahá málo dolů",
+    "Má malou hloubku",
+    "Opak hlubokého",
+    "Kaluž je taková"
+  ],
+  "MĚSÍC": [
+    "Vesmírné těleso, které obíhá Zemi",
+    "Svítí v noci",
+    "Mění svůj tvar (úplněk, srpek)",
+    "Přistáli na něm astronauti"
+  ],
+  "MĚSÍCE": [
+    "Časové úseky roku",
+    "Rok jich má 12",
+    "Leden, únor, březen...",
+    "Mají různý počet dní"
+  ],
+  "NADĚJE": [
+    "Pocit na lepší budoucnost",
+    "Věříme, že se věci zlepší",
+    "Čekáme s očekáváním",
+    "Dává nám sílu"
+  ],
+  "NAROZENINY": [
+    "Svátek narození",
+    "Dostáváme dárky",
+    "Máme dort se svíčkami",
+    "Stáváme se starší"
+  ],
+  "NEBE": [
+    "Prostor nad námi",
+    "Ve dne je modré, v noci černé",
+    "Jsou na něm mraky, slunce a hvězdy",
+    "Létají po něm ptáci"
+  ],
+  "NEHTY": [
+    "Tvrdé části na koncích prstů",
+    "Rostou nám",
+    "Můžeme je stříhat",
+    "Škrábame jimi"
+  ],
+  "NEMOCNICE": [
+    "Místo, kde se léčí nemocní lidé",
+    "Pracují v ní lékaři a sestřičky",
+    "Jezdí do ní sanitka",
+    "Ležíme v ní, když jsme nemocní"
+  ],
+  "NENÁVIST": [
+    "Velmi silná nechуť",
+    "Opak lásky",
+    "Nemáme něco rádi",
+    "Je to ošklivý pocit"
+  ],
+  "NEPOCHOPENÍ": [
+    "Když něčemu nerozumíme",
+    "Nevíme jak to je",
+    "Nechápeme to",
+    "Potřebujeme vysvětlení"
+  ],
+  "NEPRŮHLEDNÝ": [
+    "Nevidíme skrz to",
+    "Opak průhledného",
+    "Světlo neprochází",
+    "Zeď je taková"
+  ],
+  "NEÚSPĚCH": [
+    "Když se nám něco nepodaří",
+    "Nedosáhli jsme cíle",
+    "Jsme smutní",
+    "Opak úspěchu"
+  ],
+  "NITKA": [
+    "Tenké vlákno",
+    "Šije se jí",
+    "Navíjí se na cívku",
+    "Prochází jehlou"
+  ],
+  "NOC": [
+    "Část dne, kdy je tma",
+    "Opak dne",
+    "Spíme v ní",
+    "Svítí na nebi měsíc a hvězdy"
+  ],
+  "NOHA": [
+    "Část těla, na které stojíme",
+    "Nosíme na ní boty",
+    "Pomáhá nám chodit a běhat",
+    "Máme dvě"
+  ],
+  "NOS": [
+    "Část obličeje, kterou dýcháme",
+    "Cítíme s ním vůně",
+    "Když máme rýmu, teče z něj",
+    "Je uprostřed obličeje"
+  ],
+  "NOVÝ": ["Nedávno vyrobený", "Nepoužívaný", "Čerstvý", "Opak starého"],
+  "NÁDRAŽÍ": [
+    "Budova pro vlaky",
+    "Odjíždějí z něj vlaky",
+    "Čekáme tam na vlak",
+    "Má nástupiště"
+  ],
+  "NÁHODA": [
+    "Něco neočekávaného",
+    "Děje se samo",
+    "Neplánovali jsme to",
+    "Může být šťastná"
+  ],
+  "NÁMĚSTÍ": [
+    "Centrální prostranství ve městě",
+    "Bývají na něm domy a obchody",
+    "Často je na něm kašna nebo socha",
+    "Konají se na něm trhy"
+  ],
+  "NÁRAMEK": [
+    "Ozdoba na zápěstí",
+    "Může být zlatý nebo stříbrný",
+    "Nosí ho holky i kluci",
+    "Obepíná ruku"
+  ],
+  "NÁUŠNICE": [
+    "Ozdoba na ucho",
+    "Visí z ušního lalůčku",
+    "Nosí je hlavně holky",
+    "Můžou být perličkové"
+  ],
+  "NÍZKÝ": [
+    "Sahá málo nahoru",
+    "Má malou výšku",
+    "Opak vysokého",
+    "Stoleček je takový"
+  ],
+  "NĚMECKO": [
+    "Země vedle Česka",
+    "Hlavní město je Berlín",
+    "Mluví se tam německy",
+    "Vyrábějí tam auta"
+  ],
+  "NŮŽ": [
+    "Příbor na krájení",
+    "Je ostrý",
+    "Krájíme s ním maso nebo chleba",
+    "Musíme s ním být opatrní"
+  ],
+  "NŮŽEK": [
+    "Nástroje na stříhání",
+    "Mají dvě ostří",
+    "Stříháme jimi papír",
+    "Musíme být opatrní"
+  ],
+  "OBCHOD": [
+    "Místo, kde se prodává zboží",
+    "Nakupujeme v něm jídlo nebo oblečení",
+    "Platíme v něm penězi",
+    "Pracuje v něm prodavač"
+  ],
+  "OBDÉLNÍK": [
+    "Geometrický tvar se čtyřmi stranami",
+    "Protější strany jsou stejně dlouhé",
+    "Má čtyři rohy",
+    "Dveře mají tento tvar"
+  ],
+  "OBILÍ": [
+    "Rostliny pro výrobu mouky",
+    "Roste v polích",
+    "Pšenice, žito, ječmen",
+    "Peče se z něj chleba"
+  ],
+  "OBOČÍ": [
+    "Chloupky nad okem",
+    "Chrání oko před potem",
+    "Zvedneme je, když se divíme",
+    "Výrazný prvek obličeje"
+  ],
+  "OBRÁZEK": [
+    "Nakreslené nebo namalované dílo",
+    "Kreslíme ho pastelkami nebo malujeme barvami",
+    "Můžeme si ho pověsit na zeď",
+    "Je v knížkách"
+  ],
+  "ODPOVĚĎ": [
+    "Co odpovídáme na otázku",
+    "Říkáme co víme",
+    "Řešení problému",
+    "To co hledáme"
+  ],
+  "ODVAHA": [
+    "Síla překonat strach",
+    "Nebojíme se",
+    "Čelíme problémům",
+    "Hrdinové ji mají"
+  ],
+  "OHEŇ": [
+    "Hořící plameny",
+    "Hřeje a svítí",
+    "Je horký a nebezpečný",
+    "Opékáme na něm buřty"
+  ],
+  "OKNO": [
+    "Skleněná výplň ve zdi domu",
+    "Díváme se jím ven",
+    "Otevíráme ho, abychom větrali",
+    "Myjeme ho, aby bylo čisté"
+  ],
+  "OKO": [
+    "Orgán zraku",
+    "Díváme se jím na svět",
+    "Může být modré, hnědé nebo zelené",
+    "Mrkáme jím"
+  ],
+  "OKRAJ": ["Kraj něčeho", "Na konci", "Hranice", "Není v prostředku"],
+  "OKURKA": [
+    "Zelená a podlouhlá zelenina",
+    "Je vodnatá",
+    "Dává se do salátů",
+    "Může být i nakládaná"
+  ],
+  "OMELETA": [
+    "Jídlo z rozšlehaných vajec",
+    "Smaží se na pánvi",
+    "Může mít šunku nebo sýr",
+    "Je žlutá a měkká"
+  ],
+  "OMLUVA": [
+    "Přiznání chyby",
+    "Když někomu ublížíme",
+    "Řekneme promiň",
+    "Snažíme se to napravit"
+  ],
+  "OMÁČKA": [
+    "Tekutá příloha k jídlu",
+    "Může být rajská nebo svíčková",
+    "Poléváme s ní knedlíky nebo těstoviny",
+    "Zahušťuje se moukou"
+  ],
+  "OPICE": [
+    "Zvíře podobné člověku",
+    "Ráda jí banány",
+    "Houpe se na stromech",
+    "Žije v pralese"
+  ],
+  "ORANŽOVÝ": [
+    "Barva mezi červenou a žlutou",
+    "Má ji mrkev",
+    "Je to barva podzimního listí",
+    "Má ji pomeranč"
+  ],
+  "OSTROV": [
+    "Pevnina obklopená vodou ze všech stran",
+    "Může být v moři nebo v jezeře",
+    "Dostaneme se na něj lodí nebo letadlem",
+    "Robinson Crusoe žil na jednom takovém"
+  ],
+  "OTEVŘENÝ": [
+    "Není zavřený",
+    "Můžeme dovnitř",
+    "Dveře mohou být takové",
+    "Přístupný"
+  ],
+  "OTÁZKA": [
+    "Co se ptáme",
+    "Končí otazníkem",
+    "Chceme odpověď",
+    "Při hodině se ptáme"
+  ],
+  "OVCE": [
+    "Domácí zvíře, které dává vlnu",
+    "Dělá 'bééé'",
+    "Žije ve stádu",
+    "Její mládě je jehně"
+  ],
+  "OVÁL": [
+    "Geometrický tvar jako natažený kruh",
+    "Je podlouhlý",
+    "Vajíčko má tento tvar",
+    "Nemá žádné rohy"
+  ],
+  "OŘECH": [
+    "Plod se tvrdou skořápkou",
+    "Musíme ho rozlousknout",
+    "Jí ho veverka",
+    "Dáváme ho do vánočního cukroví"
+  ],
+  "PALAČINKY": [
+    "Tenké placky ze směsi vajec a mouky",
+    "Smažíme je na pánvi",
+    "Můžeme je plnit džemem",
+    "Válíme je"
+  ],
+  "PAMPELIČKY": [
+    "Žluté květiny měnící se v chmýří",
+    "Rostou všude",
+    "Foukneme je a létají",
+    "Mají dlouhý kořen"
+  ],
+  "PANENKA": [
+    "Hračka v podobě holčičky nebo miminka",
+    "Hrají si s ní hlavně holky",
+    "Oblékáme ji a vozíme v kočárku",
+    "Může mít vlasy, které se dají česat"
+  ],
+  "PAPOUŠEK": [
+    "Barevný pták, který umí mluvit",
+    "Má zahnutý zobák",
+    "Žije v teplých krajích",
+    "Chováme ho v kleci"
+  ],
+  "PAPRIKA": [
+    "Zelenina různých barev (červená, žlutá, zelená)",
+    "Může být sladká nebo pálivá",
+    "Jíme ji syrovou i pečenou",
+    "Uvnitř má semínka"
+  ],
+  "PAPÍR": [
+    "Materiál na psaní",
+    "Dělá se ze dřeva",
+    "Kreslíme na něj",
+    "Může být bílý nebo barevný"
+  ],
+  "PARNÍK": [
+    "Loď poháněná parou",
+    "Má komín s kouřem",
+    "Jezdil po řekách",
+    "Houkal na píšťalu"
+  ],
+  "PAVOUK": [
+    "Má osm nohou",
+    "Plete sítě, aby chytil hmyz",
+    "Někteří lidé se ho bojí",
+    "Není to hmyz"
+  ],
+  "PAŽE": [
+    "Části těla od ramene k ruce",
+    "Můžeme jimi objímat",
+    "Jsou mezi ramenem a loktem",
+    "Zdvihame jimi věci"
+  ],
+  "PEKAŘ": [
+    "Člověk, který peče chleba",
+    "Vstává velmi brzy",
+    "Pracuje v pekárně",
+    "Voní po něm pečivo"
+  ],
+  "PENTAGON": [
+    "Geometrický tvar s pěti stranami",
+    "Má pět rohů",
+    "Je méně známý",
+    "Pentagon v USA má tento tvar"
+  ],
+  "PEPŘ": [
+    "Černé nebo bílé koření",
+    "Dělá jídlo pálivým",
+    "Kýcháme po něm",
+    "Sůl a ... jsou na každém stole"
+  ],
+  "PERO": [
+    "Nástroj na psaní inkoustem",
+    "Potřebujeme ho na domácí úkoly",
+    "Může mít různé barvy",
+    "Píšeme s ním do sešitu"
+  ],
+  "PES": [
+    "Domácí zvíře, které štěká",
+    "Nejlepší přítel člověka",
+    "Hlídá dům a zahradu",
+    "Rád aportuje klacky"
+  ],
+  "PILA": [
+    "Nářadí na řezání dřeva",
+    "Má zuby",
+    "Pracuje s ní truhlář nebo dřevorubec",
+    "Může být ruční nebo motorová"
+  ],
+  "PILY": [
+    "Nástroje na řezání dřeva",
+    "Mají ostré zuby",
+    "Řežou sem a tam",
+    "Používá je truhlář"
+  ],
+  "PLANETA": [
+    "Velké těleso obíhající hvězdu",
+    "Země je jedna z nich",
+    "Některé mají měsíce",
+    "Mars je červená"
+  ],
+  "PLASTIK": [
+    "Umělý materiál",
+    "Dělají se z něj hračky",
+    "Může být barevný",
+    "Je lehký"
+  ],
+  "PLAVÁNÍ": [
+    "Sport ve vodě",
+    "Pohybujeme rukama a nohama",
+    "Dýcháme nad hladinou",
+    "Je to zdravé"
+  ],
+  "PLNÝ": [
+    "Bez volného místa",
+    "Až po okraj",
+    "Voda ve sklenici",
+    "Není prázdný"
+  ],
+  "PLYNOVÝ": [
+    "Týkající se plynu",
+    "Hořký modrým plamenem",
+    "Vaříme na něm",
+    "Musí být těsný"
+  ],
+  "POCHOPENÍ": [
+    "Když něčemu rozumíme",
+    "Víme jak to je",
+    "Chápeme to",
+    "Světlo nám svitlo"
+  ],
+  "POCHVALA": [
+    "Výraz uznání",
+    "Když jsme něco udělali dobře",
+    "Potěší nás",
+    "Říkáme výborně"
+  ],
+  "PODLAHA": [
+    "Spodní povrch místnosti",
+    "Chodíme po ní",
+    "Může na ní být koberec, dlažba nebo dřevo",
+    "Uklízíme ji vysavačem nebo mopem"
+  ],
+  "PODUŠKY": [
+    "Měkké polštářky",
+    "Klademe si je pod hlavu",
+    "Jsou ve vtahu",
+    "Můžou být dekorativní"
+  ],
+  "PODZIM": [
+    "Roční období po létě",
+    "Listí na stromech je barevné a padá",
+    "Pouštíme draky",
+    "Sklízí se ovoce a zelenina"
+  ],
+  "POHODA": [
+    "Příjemný pocit klidu",
+    "Všechno je v pořádku",
+    "Nic nás netrápí",
+    "Odpočíváme si"
+  ],
+  "POHOŘELOST": [
+    "Pocit velké nechuti",
+    "Nechce se nám nic",
+    "Všechno je nám jedno",
+    "Jdeme se schovat"
+  ],
+  "POKOJ": [
+    "Místnost v domě nebo bytě",
+    "Máme v něm hračky a postel",
+    "Hrajeme si v něm",
+    "Naše soukromé místo"
+  ],
+  "POKRÝVAČ": [
+    "Člověk, který opravuje střechy",
+    "Leze na vysoké budovy",
+    "Má nebezpečnou práci",
+    "Pracuje s taškami"
+  ],
+  "POKUS": [
+    "Snaha něco udělat",
+    "Zkoušíme to",
+    "Možná se povede",
+    "Můžeme to zkusit znovu"
+  ],
+  "POKUTA": [
+    "Peníze za přestupek",
+    "Dostaneme ji od policie",
+    "Platíme ji za rychlost",
+    "Nechceme ji mít"
+  ],
+  "POLIČKY": [
+    "Desky na stěně pro knihy",
+    "Ukládáme na ně věci",
+    "Můžou být dřevěné",
+    "Stojí na nich předměty"
+  ],
+  "POLSKO": [
+    "Země na severu od Česka",
+    "Hlavní město je Varšava",
+    "Mluví se tam polsky",
+    "Je tam hodně polí"
+  ],
+  "POLÉVKA": [
+    "Tekuté teplé jídlo",
+    "Jíme ji lžící jako první chod",
+    "Může být vývar nebo třeba gulášová",
+    "Často v ní je zelenina nebo nudle"
+  ],
+  "POMALÝ": [
+    "Pohybuje se nízkou rychlostí",
+    "Není rychlý",
+    "Jde jako šnek",
+    "Dorazí poslední"
+  ],
+  "POMERANČ": [
+    "Kulaté a oranžové ovoce",
+    "Loupeme ho",
+    "Je plný šťávy",
+    "Roste v teplých krajích"
+  ],
+  "PONOŽKY": [
+    "Oblečení na chodidla",
+    "Nosíme je v botách",
+    "Aby nám nebyla zima na nohy",
+    "Máme jich celý pár"
+  ],
+  "POPCORN": [
+    "Prasknutá kukuřičná zrna",
+    "Jíme ho v kině",
+    "Je bílý a lehký",
+    "Prská při přípravě"
+  ],
+  "POSTEL": [
+    "Nábytek, na kterém spíme",
+    "Ležíme v ní v noci",
+    "Má matraci a polštář",
+    "Stojí v ložnici"
+  ],
+  "POTOK": [
+    "Malá říčka",
+    "Bublá a teče rychleji než řeka",
+    "Žijí v něm raci",
+    "Vede často lesem nebo loukou"
+  ],
+  "POVRCH": ["Vrchní strana", "Co vidíme", "Nahoře", "Dotýkáme se ho"],
+  "POVÍDA": [
+    "Krátký příběh",
+    "Čteme si ji",
+    "Má začátek a konec",
+    "Může být smutná nebo veselá"
+  ],
+  "POČÍTAČ": [
+    "Elektronický stroj na práci i zábavu",
+    "Hrajeme na něm hry a píšeme úkoly",
+    "Má obrazovku, klávesnici a myš",
+    "Připojuje se k internetu"
+  ],
+  "POŠTA": [
+    "Místo, kde se posílají dopisy a balíky",
+    "Kupujeme na ní známky",
+    "Pracuje za přepážkou pošťačka",
+    "Doručuje dopisy"
+  ],
+  "PRAMEN": [
+    "Místo, kde vyvěrá voda",
+    "Začíná tam potok",
+    "Voda je čistá",
+    "Bývá pod zemí"
+  ],
+  "PRASE": [
+    "Růžové domácí zvíře",
+    "Dělá 'chrr, chrr'",
+    "Rádo se válí v blátě",
+    "Chováme ho pro maso"
+  ],
+  "PRAVÍTKO": [
+    "Školní pomůcka na rýsování rovných čar",
+    "Jsou na něm čísla (centimetry)",
+    "Může být plastové, dřevěné nebo kovové",
+    "Používáme ho v geometrii"
+  ],
+  "PRAČKA": [
+    "Spotřebič na praní oblečení",
+    "Pere špinavé prádlo",
+    "Přidáváme do ní prášek",
+    "Točí se v ní"
+  ],
+  "PRODAVAČ": [
+    "Člověk, který prodává zboží",
+    "Pracuje v obchodě",
+    "Obsluhuje zákazníky",
+    "Počítá peníze"
+  ],
+  "PROSTŘEDEK": [
+    "Střední část",
+    "Mezi začátkem a koncem",
+    "Není na okraji",
+    "Uprostřed"
+  ],
+  "PRST": [
+    "Je na konci ruky nebo nohy",
+    "Na ruce jich máme pět",
+    "Pomáhají nám uchopovat věci",
+    "Máme na nich nehty"
+  ],
+  "PRSTY": [
+    "Malé části rukou a nohou",
+    "Na rukou jich máme pět",
+    "Uchopujeme jimi věci",
+    "Máme na nich nehty"
+  ],
+  "PRÁSK": [
+    "Zvuk prasknutí",
+    "Když se něco zlomí",
+    "Rychlý ostrý zvuk",
+    "Například prasknutí balónku"
+  ],
+  "PRÁZDNÝ": ["Bez obsahu", "Opak plného", "Nic v tom není", "Volné místo"],
+  "PRŮHLEDNÝ": [
+    "Vidíme skrz to",
+    "Sklo je takové",
+    "Světlo prochází",
+    "Transparentní"
+  ],
+  "PSACÍ": [
+    "Pomůcky na psaní",
+    "Tužky, pera, fixy",
+    "Potřebujeme je ve škole",
+    "Píšeme s nimi úkoly"
+  ],
+  "PSANÍ": [
+    "Tvorba písmen",
+    "Používáme tužku",
+    "Vytváříme slova",
+    "Máme před sebou papír"
+  ],
+  "PTÁCI": [
+    "Zvířata s křídly a peřím",
+    "Většina z nich umí létat",
+    "Snáší vajíčka",
+    "Zpívají"
+  ],
+  "PUSA": [
+    "Část obličeje, kterou jíme a mluvíme",
+    "Dáváme s ní pusu",
+    "Máme v ní zuby a jazyk",
+    "Je pod nosem"
+  ],
+  "PÁNEV": [
+    "Nádobí na smažení",
+    "Smažíme na ní řízky nebo palačinky",
+    "Má dlouhou rukojeť",
+    "Musí být horká"
+  ],
+  "PÁREK": [
+    "Uzenina, kterou jíme s hořčicí",
+    "Často se opéká na ohni",
+    "Vkládá se do rohlíku",
+    "Může být vepřový nebo kuřecí"
+  ],
+  "PÍSEK": [
+    "Drobounká zrníčka nerostů",
+    "Je na pláži nebo na hřišti",
+    "Stavíme z něj hrady",
+    "Sype se"
+  ],
+  "PÍSEŇ": [
+    "Skladba, která se zpívá",
+    "Má slova a melodii",
+    "Zpíváme si ji pro radost",
+    "Učíme se ji ve škole"
+  ],
+  "PÍSMENO": [
+    "Znak pro hlásku",
+    "A, B, C, ...",
+    "Skládáme z nich slova",
+    "Učíme se je ve škole ve slabikáři"
+  ],
+  "PŘEDNOST": [
+    "Pravidlo v dopravě",
+    "Kdo má ji, jede první",
+    "Musíme ji dát záchranám",
+    "Je důležitá na křižovatkách"
+  ],
+  "PŘEKVAPENÍ": [
+    "Pocit z nečekaného",
+    "Udělá se nám velké oči",
+    "Nevěděli jsme to",
+    "Ústa nám zůstanou otevřená"
+  ],
+  "PŘESTUPEK": [
+    "Menší porušení pravidel",
+    "Není tak zlý jako zločin",
+    "Dostaneme za něj pokutu",
+    "Dopravní patrol ho řeší"
+  ],
+  "PŘIVÍTÁNÍ": [
+    "Když někoho vítáme",
+    "Říkáme ahoj",
+    "Radost z setkání",
+    "Můžeme se obejmout"
+  ],
+  "PŘÁTELSTVÍ": [
+    "Vztah mezi kamarády",
+    "Máme se rádi",
+    "Pomáháme si",
+    "Je to krásný pocit"
+  ],
+  "PŘÍPRAVA": [
+    "Činnost před hlavní věcí",
+    "Připravujeme se",
+    "Plánujeme dopředu",
+    "Chceme být připraveni"
+  ],
+  "RACHOTÍ": [
+    "Hlasitý nepořádný zvuk",
+    "Když se někde hýbe s věcmi",
+    "Kovové předměty dohromady",
+    "Hlukový chaos"
+  ],
+  "RADNICE": [
+    "Budova městského úřadu",
+    "Pracuje tam starosta",
+    "Řeší se tam úřední věci",
+    "Bývá na náměstí"
+  ],
+  "RADOST": [
+    "Pocit štěstí a veselí",
+    "Máme ji, když dostaneme dárek",
+    "Smějeme se při ní",
+    "Opak smutku"
+  ],
+  "RAJČE": [
+    "Červená a kulatá zelenina",
+    "Dělá se z něj kečup",
+    "Roste na keři",
+    "Jíme ho v salátu"
+  ],
+  "RAKETA": [
+    "Stroj, který létá do vesmíru",
+    "Startuje s velkým ohněm a kouřem",
+    "Vynáší astronauty na oběžnou dráhu",
+    "Létá nejrychleji ze všeho"
+  ],
+  "RAKOUSKO": [
+    "Země na jihu od Česka",
+    "Hlavní město je Vídeň",
+    "Mluví se tam německy",
+    "Jsou tam vysoké hory"
+  ],
+  "RAMENA": [
+    "Části těla nahoře",
+    "Spojují paže s trupem",
+    "Nosíme na nich batohy",
+    "Můžou bolet z těžkých věcí"
+  ],
+  "RODINA": [
+    "Rodiče a děti",
+    "Lidé, kteří spolu žijí",
+    "Máme se v ní rádi",
+    "Pomáháme si"
+  ],
+  "ROHLÍK": [
+    "Bílé pečivo zahnutého tvaru",
+    "Jíme ho k snídani",
+    "Může být posypaný mákem nebo solí",
+    "Kupujeme ho v pekárně"
+  ],
+  "ROKY": [
+    "Dlouhé časové úseky",
+    "Mají 365 dní",
+    "Slavíme je narozeniny",
+    "Věk se počítá v nich"
+  ],
+  "ROZBITÝ": [
+    "Má části oddělené",
+    "Opak celého",
+    "Nefunguje správně",
+    "Rozbilo se to"
+  ],
+  "ROZHODNUTÍ": [
+    "Když si vybereme",
+    "Musíme se rozhodnout",
+    "Vybereme z možností",
+    "Může být těžké"
+  ],
+  "ROZLOUČENÍ": [
+    "Když se s někým loučíme",
+    "Říkáme ahoj",
+    "Možná se dlouho neuvidíme",
+    "Může být smutné"
+  ],
+  "ROZMELI": [
+    "Sladká pomazánka z ořechů",
+    "Mažeme si ji na chleba",
+    "Je hnědá a hustá",
+    "Chutná po lískových ořeších"
+  ],
+  "RUKA": [
+    "Část těla s pěti prsty",
+    "Pomáhá nám uchopit věci",
+    "Máme dvě",
+    "Můžeme s ní malovat"
+  ],
+  "RUKAVICE": [
+    "Oblečení na ruce",
+    "Chrání nás před zimou",
+    "Nosíme je při lyžování",
+    "Mají místo pro každý prst"
+  ],
+  "RUSKO": [
+    "Největší země světa",
+    "Hlavní město je Moskva",
+    "Mluví se tam rusky",
+    "Je tam moc zima"
+  ],
+  "RYBA": [
+    "Živočich, který žije ve vodě",
+    "Má šupiny a ploutve",
+    "Dýchá žábrami",
+    "Chytáme ji na udici"
+  ],
+  "RYBNÍK": [
+    "Stojatá voda menší než jezero",
+    "Chováme v něm kapry",
+    "V zimě zamrzá a bruslíme na něm",
+    "Žijí v něm žáby"
+  ],
+  "RYBY": [
+    "Živočichové žijící ve vodě",
+    "Mají šupiny a ploutve",
+    "Dýchají žábrami",
+    "Chytáme je na udici"
+  ],
+  "RYCHLOST": [
+    "Jak rychle jedeme",
+    "V obci smíme padesát",
+    "Na dálnici se může více",
+    "Měří ji radar"
+  ],
+  "RYCHLÝ": [
+    "Pohybuje se vysokou rychlostí",
+    "Není pomalý",
+    "Běží jako vítr",
+    "Dorazí první"
+  ],
+  "RÁDIO": [
+    "Přístroj na poslouchání hudby",
+    "Hraje z něj hudba a zprávy",
+    "Ladíme na něm stanice",
+    "Může být malé"
+  ],
+  "RÁNO": ["Začátek dne", "Vstáváme z postele", "Snídáme", "Vychází slunce"],
+  "RÝŽE": [
+    "Malá bílá zrníčka",
+    "Jí se jako příloha k masu nebo omáčkám",
+    "Roste v Asii na polích pod vodou",
+    "Lepkavá po uvaření"
+  ],
+  "RŮŽE": [
+    "Krásná květina s trny",
+    "Je červená nebo bílá",
+    "Voní příjemně",
+    "Dává se k lásce"
+  ],
+  "RŮŽOVÝ": [
+    "Světle červená barva",
+    "Má ji prasátko",
+    "Je to dívčí barva",
+    "Míchá se z červené a bílé"
+  ],
+  "SALÁM": [
+    "Uzenina, která se krájí na kolečka",
+    "Dáváme si ho na chleba nebo na pizzu",
+    "Je v něm maso a koření",
+    "Kupujeme ho u řezníka"
+  ],
+  "SANDÁLY": [
+    "Lehká letní obuv",
+    "Mají řemínky",
+    "Nosíme je bez ponožek",
+    "Nohy v nich dýchají"
+  ],
+  "SANITKA": [
+    "Auto, které vozí nemocné do nemocnice",
+    "Má modrý maják a houkačku",
+    "Řídí ji záchranář",
+    "Musíme jí na silnici uvolnit cestu"
+  ],
+  "SATURN": [
+    "Planeta s prstenci",
+    "Je žlutý",
+    "Má krásné kruhy",
+    "Je šestá od Slunce"
+  ],
+  "SAXOFON": [
+    "Dechový nástroj ze žluté kovu",
+    "Má zahnutý tvar",
+    "Fouká se do náústku",
+    "Hraje jazz"
+  ],
+  "SEKUNDA": [
+    "Velmi krátký časový úsek",
+    "Hodina jich má 3600",
+    "Rychlý okamžik",
+    "Tikot hodin ji odměřuje"
+  ],
+  "SEMAFOR": [
+    "Světelné signály pro dopravu",
+    "Má tři barvy",
+    "Červená znamená stůj",
+    "Zelená znamená volno"
+  ],
+  "SESTRA": [
+    "Sourozenec ženského pohlaví",
+    "Holka ze stejné rodiny",
+    "Půjčuje mi hračky",
+    "Pomáhá mi"
+  ],
+  "SEŠIT": [
+    "Do něj si píšeme ve škole",
+    "Má linky nebo čtverečky",
+    "Může být tenký nebo tlustý",
+    "Na každém předmětu máme jiný"
+  ],
+  "SILNICE": [
+    "Cesta pro auta",
+    "Je asfaltová",
+    "Musíme se na ní rozhlédnout",
+    "Vede mezi městy a vesnicemi"
+  ],
+  "SILVESTER": [
+    "Poslední den v roce",
+    "Sledujeme ohňostroje",
+    "Připíjíme si o půlnoci",
+    "Je 31. prosince"
+  ],
+  "SKATEBOY": [
+    "Deska na kolečkách",
+    "Jezdíme na něm postojmo",
+    "Odtrková se nohou",
+    "Umožňuje triky"
+  ],
+  "SKLO": [
+    "Průhledný křehký materiál",
+    "Dělají se z něj okna",
+    "Může se rozbít",
+    "Vidíme skrz něj"
+  ],
+  "SKOK": [
+    "Rychlý pohyb nahoru",
+    "Odrazíme se od země",
+    "Chvíli jsme ve vzduchu",
+    "Dopadneme dolů"
+  ],
+  "SKŘÍPOT": [
+    "Nepříjemný vysoký zvuk",
+    "Dělá ho třeba křída",
+    "Škrábe to do uší",
+    "Škrábavý zvuk"
+  ],
+  "SKŘÍŇ": [
+    "Nábytek na ukládání oblečení",
+    "Má dveře a poličky",
+    "Věšíme do ní ramínka",
+    "Stojí v ložnici nebo v pokoji"
+  ],
+  "SLABOST": [
+    "Když nemáme sílu",
+    "Opak síly",
+    "Jsme unavení",
+    "Nemůžeme zvednout"
+  ],
+  "SLON": [
+    "Velké šedé zvíře s chobotem",
+    "Má velké uši a kly",
+    "Žije v Africe a Asii",
+    "Troubí chobotem"
+  ],
+  "SLONI": [
+    "Největší suchozemská zvířata",
+    "Mají chobot a velké uši",
+    "Žijí v Africe a Asii",
+    "Troubí chobotem"
+  ],
+  "SLOVENSKO": [
+    "Země na východě od Česka",
+    "Hlavní město je Bratislava",
+    "Mluví se tam slovensky",
+    "Dříve jsme s nimi byli jeden stát"
+  ],
+  "SLOVNÍK": [
+    "Kniha s vysvětlením slov",
+    "Vyhledáváme v něm významy",
+    "Je seřazen podle abecedy",
+    "Pomáhá s cizími jazyky"
+  ],
+  "SLOVO": [
+    "Skládá se z písmen a má význam",
+    "Používáme je při mluvení a psaní",
+    "Věta se skládá z nich",
+    "Čteme je v knihách"
+  ],
+  "SLOŽITOST": [
+    "Když je něco těžké",
+    "Nerozumíme tomu",
+    "Má mnoho částí",
+    "Potřebujeme pomoc"
+  ],
+  "SLUNCE": [
+    "Svítí na nebi ve dne",
+    "Velká horká hvězda",
+    "Dává nám teplo a světlo",
+    "Díky němu rostou rostliny"
+  ],
+  "SLUNEČNICE": [
+    "Vysoké rostliny se žlutými květy",
+    "Otáčejí se za sluncem",
+    "Mají černá semínka",
+    "Jsou hodně vysoké"
+  ],
+  "SMETANA": [
+    "Bílá hustá tekutina z mléka",
+    "Dáváme ji do polévky",
+    "Může být sladká nebo kyselá",
+    "Šleháme ji"
+  ],
+  "SMRKY": [
+    "Vysoké jehličnaté stromy",
+    "Mají šišky",
+    "Růstou rychle",
+    "Používají se na stavbu"
+  ],
+  "SMUTEK": [
+    "Pocit, když jsme nešťastní",
+    "Pláčeme při něm",
+    "Opak radosti",
+    "Máme ho, když se nám něco nepovede"
+  ],
+  "SNÍH": [
+    "Bílá pokrývka v zimě",
+    "Padá z nebe v podobě vloček",
+    "Stavíme z něj sněhuláka",
+    "Lyžujeme na něm"
+  ],
+  "SOPKA": [
+    "Hora, ze které vytéká láva",
+    "Chrlí oheň a kouř",
+    "Je nebezpečná",
+    "Nachází se u moře"
+  ],
+  "SPRCHA": [
+    "Zařízení v koupelně na mytí ve stoje",
+    "Teče z ní voda shora",
+    "Je rychlejší než vana",
+    "Používáme při ní sprchový gel"
+  ],
+  "STARÝ": ["Dlouho existující", "Používaný", "Opak nového", "Prošel časem"],
+  "STOLETÍ": [
+    "Úsek sta let",
+    "Velmi dlouhá doba",
+    "Historie se dělí podle nich",
+    "Lidé je nezažijí celé"
+  ],
+  "STOP": [
+    "Dopravní značka zastavení",
+    "Je červená a má osm stran",
+    "Musíme se úplně zastavit",
+    "Znamená to stop"
+  ],
+  "STRACH": [
+    "Pocit před nebezpečím",
+    "Máme ho ze tmy",
+    "Srdce nám rychle bije",
+    "Chceme utéct"
+  ],
+  "STROM": [
+    "Velká rostlina se dřevem a listy",
+    "Dává nám stín a ovoce",
+    "Na podzim shazuje listí",
+    "Stojí v lese nebo v parku"
+  ],
+  "STROP": [
+    "Horní část místnosti",
+    "Opak podlahy",
+    "Visí na něm lustr",
+    "Díváme se na něj, když ležíme v posteli"
+  ],
+  "STUDENÝ": [
+    "Velmi nízká teplota",
+    "Ještě chladnější než chladný",
+    "Led je takový",
+    "Mrznou nás ruce"
+  ],
+  "STUPEŇ": [
+    "Jednotka teploty",
+    "Krátce se píše °C",
+    "Voda zmrzá při nule",
+    "Teplota se měří v nich"
+  ],
+  "STŘED": [
+    "Prostřední místo",
+    "Stejně daleko od okrajů",
+    "Uprostřed kruzhu",
+    "Těžiště"
+  ],
+  "STŮL": [
+    "Nábytek, u kterého jíme nebo píšeme",
+    "Stojí v kuchyni nebo v pokoji",
+    "Klademe na něj talíře",
+    "Učíme se u něj"
+  ],
+  "SUCHÝ": ["Bez vody", "Opak mokrého", "Poušť je taková", "Nevláčný"],
+  "SUKNĚ": [
+    "Oblečení pro holky a ženy",
+    "Nosí se na dolní polovině těla",
+    "Může být krátká nebo dlouhá",
+    "Není to kalhoty"
+  ],
+  "SVATBA": [
+    "Oslava sňatku",
+    "Nevěsta má bílé šaty",
+    "Házejí se květy",
+    "Všichni slaví"
+  ],
+  "SVETR": [
+    "Teplé oblečení na horní část těla",
+    "Nosíme ho v zimě",
+    "Je pletený z vlny",
+    "Chrání nás před chladem"
+  ],
+  "SVÍCNY": [
+    "Držáky na svíčky",
+    "Můžou být kovové",
+    "Dekorují stůl",
+    "Svíčky se do nich zasunují"
+  ],
+  "SYČENÍ": [
+    "Zvuk hada nebo páry",
+    "Sssss",
+    "Protažený zvuk",
+    "Varování nebo únik"
+  ],
+  "SÁČEK": [
+    "Malý pytlík",
+    "Můžeme do něj dávat věci",
+    "Může být plastový",
+    "Zavazuje se"
+  ],
+  "SÁŇKY": [
+    "Zimní dopravní prostředek",
+    "Jezdíme na nich ze svahu",
+    "Klouzou po sněhu",
+    "Můžou být dřevěné"
+  ],
+  "SÍLA": [
+    "Jak moc můžeme tlačit",
+    "Kulturista má velkou",
+    "Potřebujeme ji na zdvihání",
+    "Slon má obrovskou"
+  ],
+  "SÝR": [
+    "Vyrábí se z mléka",
+    "Může mít díry",
+    "Jíme ho na chlebu nebo na pizze",
+    "Ukládáme ho do lednice"
+  ],
+  "SŮL": [
+    "Bílé koření, které dává chuť",
+    "Je v mořské vodě",
+    "V pohádce byla nad zlato",
+    "Nesmíme to s ní přehánět"
+  ],
+  "TABULE": [
+    "Černá nebo bílá plocha ve třídě",
+    "Učitel na ni píše",
+    "Píše se na ni křídou",
+    "Visí na stěně"
+  ],
+  "TALÍŘ": [
+    "Nádobí, ze kterého jíme",
+    "Je kulatý a plochý",
+    "Máme ho v kuchyni",
+    "Dáváme na něj jídlo"
+  ],
+  "TANEC": [
+    "Pohyb do rytmu hudby",
+    "Tancujeme na plese nebo na diskotéce",
+    "Může být pomalý nebo rychlý",
+    "Zábavná aktivita s hudbou"
+  ],
+  "TAŠKA": [
+    "Nosíme v ní věci do školy nebo na nákup",
+    "Má ucha nebo popruh přes rameno",
+    "Může být látková, kožená nebo plastová",
+    "Chrání věci uvnitř"
+  ],
+  "TELATA": [
+    "Malé krávy",
+    "Jsou černobílá nebo hnědá",
+    "Pijí mléko od matky",
+    "Skáčou po louce"
+  ],
+  "TELEFON": [
+    "Přístroj na volání a posílání zpráv",
+    "Můžeme s ním i fotit a hrát hry",
+    "Nosíme ho všude s sebou",
+    "Je 'chytrý'"
+  ],
+  "TELESCOP": [
+    "Přístroj na pozorování vesmíru",
+    "Přibližuje vzdálené objekty",
+    "Astronomové s ním pracují",
+    "Má čočky nebo zrcadla"
+  ],
+  "TELEVIZE": [
+    "Přístroj, na kterém sledujeme filmy a pohádky",
+    "Má velkou obrazovku",
+    "Ovládáme ji dálkovým ovladačem",
+    "Je v obývacím pokoji"
+  ],
+  "TENIS": [
+    "Sport s raketami",
+    "Míček se odpaluje přes síť",
+    "Hraje se na kurtu",
+    "Počítají se sety"
+  ],
+  "TEPELNÝ": [
+    "Týkající se tepla",
+    "Hřeje místnost",
+    "Může být radiátor",
+    "V zimě ho potřebujeme"
+  ],
+  "TEPLÝ": [
+    "Má vysokou teplotu",
+    "Není studený",
+    "Hřeje nás",
+    "Příjemný na dotek"
+  ],
+  "TICHY": [
+    "Bez hluku",
+    "Slyšíme málo",
+    "V knihovně musíme být takoví",
+    "Opak hlučného"
+  ],
+  "TIKY": ["Zvuk hodin", "Opakuje se stále", "Rytmický zvuk", "Počítá čas"],
+  "TMAVÝ": [
+    "Špatně viditelný",
+    "Opak jasného",
+    "Málo světla",
+    "V noci je takové počasí"
+  ],
+  "TOVÁRNA": [
+    "Budova pro výrobu",
+    "Vyrábějí se v ní věci",
+    "Pracuje tam mnoho lidí",
+    "Má vysoké komíny"
+  ],
+  "TRAMVAJ": [
+    "Elektrická doprava po kolejích",
+    "Jezdí po městských ulicích",
+    "Má pantograf nahoře",
+    "Zvonk při jízdě"
+  ],
+  "TRIČKO": [
+    "Oblečení na horní část těla",
+    "Má krátké rukávy",
+    "Může mít obrázek",
+    "Nosíme ho v létě"
+  ],
+  "TROJKA": [
+    "Číslo po dvojce",
+    "Píše se jako 3",
+    "Trojúhelník má tři strany",
+    "Je to první liché číslo po 1"
+  ],
+  "TROJÚHELNÍK": [
+    "Geometrický tvar se třemi stranami",
+    "Má tři rohy",
+    "Může být různě velký",
+    "Střecha má často tento tvar"
+  ],
+  "TROLEJBUS": [
+    "Autobus na elektřinu",
+    "Má tyče na střeše",
+    "Jezdí po městě",
+    "Je tichý"
+  ],
+  "TRPĚLIVOST": [
+    "Schopnost čekat",
+    "Nehněváme se",
+    "Umíme čekat",
+    "Věci trvají svůj čas"
+  ],
+  "TRUBKA": [
+    "Žesťový dechový nástroj",
+    "Je lesklá a zlatá",
+    "Hraje se ústy",
+    "Je hlasitá"
+  ],
+  "TRUHLÁŘ": [
+    "Člověk, který dělá nábytek",
+    "Pracuje se dřevem",
+    "Má dílnu",
+    "Dělá stoly a židle"
+  ],
+  "TRÁVA": [
+    "Zelená rostlina pokrývající zem",
+    "Roste na louce nebo v parku",
+    "Sečeme ji sekačkou",
+    "Je měkká"
+  ],
+  "TULIPÁNY": [
+    "Jarní květiny z cibulek",
+    "Můžou být barevné",
+    "Kvètou na jaře",
+    "Mají hladké listy"
+  ],
+  "TUNEL": [
+    "Cesta skrz horu",
+    "Je v něm tma",
+    "Svítí tam lampy",
+    "Jedeme jím skrz překážku"
+  ],
+  "TUŽKA": [
+    "Nástroj na psaní a kreslení",
+    "Má uvnitř tuhu",
+    "Musíme ji ořezávat",
+    "Lze ji vygumovat"
+  ],
+  "TVRDOST": [
+    "Když se něco nemoč stlačit",
+    "Opak měkkosti",
+    "Diamant má největší",
+    "Nelze promáčknout"
+  ],
+  "TYGR": [
+    "Velká kočkovitá šelma s pruhy",
+    "Je oranžovo-černý",
+    "Žije v Asii",
+    "Dobrý plavec"
+  ],
+  "TYGŘI": [
+    "Velké kočky s pruhy",
+    "Jsou oranžoví s černými pruhy",
+    "Žijí v Asii",
+    "Jsou dobří plavci"
+  ],
+  "TÁTA": [
+    "Rodič mužského pohlaví",
+    "Chodí do práce",
+    "Hraje si s dětmi",
+    "Opravuje věci v domě"
+  ],
+  "TÝDEN": [
+    "Má sedm dní",
+    "Začíná pondělím a končí nedělí",
+    "Dva dny z něj jsou víkend",
+    "Chození do školy a práce"
+  ],
+  "TÝDNY": [
+    "Časové úseky sedmi dní",
+    "Měsíc jich má čtyři",
+    "Začínají pondělím",
+    "Končí nedělí"
+  ],
+  "TĚSTOVINY": [
+    "Jídlo z mouky a vody",
+    "Mohou být špagety, kolínka nebo mašličky",
+    "Vaří se ve vodě",
+    "Jíme je s omáčkou nebo sýrem"
+  ],
+  "TĚŽKOST": [
+    "Když něco hodně váží",
+    "Opak lehkosti",
+    "Kámen má tuto vlastnost",
+    "Těžko se zvedne"
+  ],
+  "TŘÍDA": [
+    "Místnost ve škole, kde se učíme",
+    "Je v ní tabule a lavice",
+    "Jsou v ní všichni spolužáci",
+    "Vede ji paní učitelka"
+  ],
+  "UCHO": [
+    "Orgán sluchu",
+    "Slyšíme jím zvuky",
+    "Visí nám na něm náušnice",
+    "Máme dvě"
+  ],
+  "UMYVADLO": [
+    "Nádoba v koupelně nebo na záchodě",
+    "Myjeme si v něm ruce",
+    "Je u něj kohoutek s vodou",
+    "Je keramické"
+  ],
+  "URAN": [
+    "Planeta sluneční soustavy",
+    "Je modrý",
+    "Je daleko od Slunce",
+    "Má prstence"
+  ],
+  "UZLÍK": [
+    "Malé zavázání",
+    "Uděláme ho na provázku",
+    "Zabraňuje rozvázání",
+    "Můžeme ho rozvázat"
+  ],
+  "UČEBNICE": [
+    "Kniha s látkou k učení",
+    "Máme ji k předmětu",
+    "Učíme se z ní",
+    "Je plná informací"
+  ],
+  "UČITEL": [
+    "Člověk, který učí ve škole",
+    "Zkouší a dává známky",
+    "Píše na tabuli",
+    "Všechno ví (nebo by měl)"
+  ],
+  "VANA": [
+    "Velká nádoba na koupání v leže",
+    "Napouštíme si do ní horkou vodu a pěnu",
+    "Je v koupelně",
+    "Je pohodlnější než sprcha"
+  ],
+  "VAŘENÍ": [
+    "Příprava jídla",
+    "Používáme sporak",
+    "Míchame v hrnci",
+    "Následujeme recept"
+  ],
+  "VELIKONOCE": [
+    "Jarní svátek s vajíčky",
+    "Slavíme zmrtvýchvstání",
+    "Malujeme kraslice",
+    "Šléháme pomlázkou"
+  ],
+  "VELIKOST": [
+    "Jak velké něco je",
+    "Může být malé nebo obrovské",
+    "Porovnáváme předměty",
+    "Sloni mají velkou"
+  ],
+  "VELKÝ": [
+    "Má mnoho místa",
+    "Opak malého",
+    "Zabírá hodně prostoru",
+    "Je větší než ostatní"
+  ],
+  "VEVERKA": [
+    "Malé zvíře, které skáče po stromech",
+    "Má huňatý ocas",
+    "Louská oříšky",
+    "Staví si hnízdo v dutině stromu"
+  ],
+  "VEČER": [
+    "Konec dne",
+    "Zapínáme světla",
+    "Díváme se na televizi nebo si čteme",
+    "Chystáme se do postele"
+  ],
+  "VIDLIČKA": [
+    "Příbor se zuby",
+    "Napichujeme s ní jídlo",
+    "Používáme ji při obědě",
+    "Je kovová"
+  ],
+  "VIOLONČELO": [
+    "Velký strunný nástroj",
+    "Sedíme za ním",
+    "Hraje se smyčcem",
+    "Je větší než housle"
+  ],
+  "VJEZD": [
+    "Místo, kde se vjíždí",
+    "Někdy je zakázaný",
+    "Značka to označuje",
+    "Do some míst nesmíme"
+  ],
+  "VLAK": [
+    "Dopravní prostředek, který jezdí po kolejích",
+    "Má vagóny a lokomotivu",
+    "Houká a píská",
+    "Jezdí mezi městy"
+  ],
+  "VLASY": [
+    "Rostou nám na hlavě",
+    "Musíme je česat a mýt",
+    "Mohou být dlouhé, krátké, rovné nebo kudrnaté",
+    "Pan kadeřník je stříhá"
+  ],
+  "VLHKÝ": [
+    "Trochu mokrý",
+    "Obsahuje vlhkost",
+    "Po dešti je takové počasí",
+    "Prádlo po praní"
+  ],
+  "VLK": [
+    "Divoké zvíře podobné psovi",
+    "Žije ve smečce",
+    "V noci vyje na měsíc",
+    "Byl v pohádce o Karkulce"
+  ],
+  "VNITŘEK": [
+    "Prostředek uvnitř",
+    "To co je schované",
+    "Uvnitř obalu",
+    "Nejde vidět"
+  ],
+  "VNĚJŠEK": [
+    "To co je venku",
+    "Co vidíme zvenku",
+    "Povrch věci",
+    "Externí strana"
+  ],
+  "VODA": [
+    "Průhledná tekutina k pití",
+    "Najdeme ji v řece nebo v moři",
+    "Je nezbytná pro život",
+    "V zimě zamrzá"
+  ],
+  "VODOVODNÍ": [
+    "Týkající se vody v domě",
+    "Teče jím voda",
+    "Je pod zemí",
+    "Přivádí vodu do domu"
+  ],
+  "VOLNOST": [
+    "Možnost dělat co chceme",
+    "Nikdo nás neomezuje",
+    "Můžeme si vybrat",
+    "Птіцы létají ve volnosti"
+  ],
+  "VRTULNÍK": [
+    "Letadlo s vrtulí nahoře",
+    "Může stát ve vzduchu",
+    "Používá ho záchranná služba",
+    "Je hlučný"
+  ],
+  "VYSAVAČ": [
+    "Spotřebič na úklid",
+    "Vysává prach z podlahy",
+    "Dělá hluk",
+    "Má dlouhou hadici"
+  ],
+  "VYSOKÝ": [
+    "Sahá daleko nahoru",
+    "Má velkou výšku",
+    "Hora je taková",
+    "Není nízký"
+  ],
+  "VYSVĚTLENÍ": [
+    "Když něco objasníme",
+    "Pomáháme pochopit",
+    "Říkáme jak to je",
+    "Děláme jasno"
+  ],
+  "VZDUCH": [
+    "Plyn, který dýcháme",
+    "Je všude kolem nás",
+    "Je neviditelný",
+    "Potřebujeme ho k životu"
+  ],
+  "VZTEK": [
+    "Pocit z něčeho zlého",
+    "Červenáme se při něm",
+    "Křičíme při něm",
+    "Chceme něco hodit"
+  ],
+  "VÁNOCE": [
+    "Zimní svátek s dárky",
+    "Slavíme narození Ježíška",
+    "Zdobíme stromeček",
+    "Jsou 24. prosince"
+  ],
+  "VÁZY": [
+    "Nádoby na květiny",
+    "Jsou z keramiky nebo skla",
+    "Lijeme do nich vodu",
+    "Jsou ozdobné"
+  ],
+  "VÍTR": [
+    "Pohybující se vzduch",
+    "Pouštíme při něm draka",
+    "Ohýbá stromy",
+    "Může foukat slabě i silně"
+  ],
+  "VÝJEZD": [
+    "Místo, kde se vyjíždí",
+    "Opak vjezdu",
+    "Z dálnice je označený",
+    "Můžeme odjet jinam"
+  ],
+  "VÝSLEDEK": [
+    "Co z něčeho vyšlo",
+    "Konec práce",
+    "Výsledek testu",
+    "To co jsme dostali"
+  ],
+  "VÝŠKA": [
+    "Jak moc nahoru",
+    "Od země ke vrcholu",
+    "Hora má velkou",
+    "Měří se metry"
+  ],
+  "VČELA": [
+    "Hmyz, který vyrábí med",
+    "Je žlutočerná",
+    "Dělá 'bzzz'",
+    "Může dát žihadlo"
+  ],
+  "VĚTA": [
+    "Skládá se ze slov a dává smysl",
+    "Začíná velkým písmenem a končí tečkou",
+    "Říkáme ji nebo píšeme",
+    "Vyjadřuje myšlenku"
+  ],
+  "VĚTVE": [
+    "Části stromu rostoucí z kmene",
+    "Rostou na nich listy",
+    "Ptáci na nich sedí",
+    "Můžou se zlomit"
+  ],
+  "XYLOFON": [
+    "Bicí nástroj s kovovými deskami",
+    "Tluče se na něj kladívky",
+    "Každá deska má jiný tón",
+    "Je barevný"
+  ],
+  "ZAHRADA": [
+    "Pozemek u domu",
+    "Pěstujeme na ní květiny a zeleninu",
+    "Může na ní být trávník a stromy",
+    "Hrajeme si na ní"
+  ],
+  "ZAHRADNÍK": [
+    "Člověk pěstující rostliny",
+    "Stará se o květiny",
+    "Pracuje venku",
+    "Má špinavé ruce"
+  ],
+  "ZAJÍC": [
+    "Zvíře s dlouhýma ušima a krátkým ocasem",
+    "Rychle běhá po poli",
+    "Je plachý",
+    "Je podobný králíkovi, ale je divoký"
+  ],
+  "ZAVŘENÝ": [
+    "Není otevřený",
+    "Nemůžeme dovnitř",
+    "Obchod může být takový",
+    "Nepřístupný"
+  ],
+  "ZAČÁTEK": ["První část", "Když něco začíná", "Opak konce", "Vše má nějaký"],
+  "ZEBRA": [
+    "Africké zvíře podobné koni",
+    "Má černé a bílé pruhy",
+    "Žije ve stádech",
+    "Vypadá jako v pyžamu"
+  ],
+  "ZEBRY": [
+    "Africká zvířata podobná koním",
+    "Mají černobílé pruhy",
+    "Žijí ve stádech",
+    "Vypadají jako v pyžamu"
+  ],
+  "ZEMĚ": [
+    "Planeta, na které žijeme",
+    "Je kulatá",
+    "Obíhá kolem Slunce",
+    "Je třetí planeta od Slunce"
+  ],
+  "ZEĎ": [
+    "Stěna, která tvoří místnost nebo ohraničuje pozemek",
+    "Věšíme na ni obrázky",
+    "Může být z cihel nebo betonu",
+    "Tvoří oporu pro střechu"
+  ],
+  "ZIMA": [
+    "Nejchladnější roční období",
+    "Padá sníh",
+    "Stavíme sněhuláky a lyžujeme",
+    "Nosíme teplé oblečení"
+  ],
+  "ZMRZLINA": [
+    "Sladká a studená pochoutka",
+    "Jíme ji v létě",
+    "Může být kopečková nebo točená",
+    "Může být ovocná nebo čokoládová"
+  ],
+  "ZNÁMKA": [
+    "Hodnocení ve škole",
+    "Může být 1, 2, 3, 4, nebo 5",
+    "Jednička je nejlepší",
+    "Píše ji učitel"
+  ],
+  "ZPÍVÁNÍ": [
+    "Vytváření melodie hlasem",
+    "Používáme ústa",
+    "Může být tiché nebo hlasité",
+    "Jde s tím hudba"
+  ],
+  "ZRCADLA": [
+    "Lesklé plochy ukazující odraz",
+    "Díváme se do nich",
+    "Visí v koupelně",
+    "Odrážejí světlo"
+  ],
+  "ZRCADLO": [
+    "Ukazuje náš odraz",
+    "Díváme se do něj, když se češeme",
+    "Je skleněné a hladké",
+    "Visí v koupelně nebo v předsíni"
+  ],
+  "ZUB": [
+    "Jsou v puse a koušeme s nimi jídlo",
+    "Musíme si je čistit kartáčkem",
+    "Když bolí, jdeme k zubaři",
+    "Dospělý jich má 32"
+  ],
+  "ZUBY": [
+    "Tvrdé části v ústech",
+    "Kousáme jimi jídlo",
+    "Čistíme si je kartáčkem",
+    "Jsou bílé"
+  ],
+  "ZÁBAVA": [
+    "Příjemné trávení času",
+    "Bavíme se",
+    "Smějeme se při ní",
+    "Hrajeme si"
+  ],
+  "ZÁCHOD": [
+    "Místnost nebo zařízení na vykonávání potřeby",
+    "Je v něm mísa a splachovadlo",
+    "Musí se po sobě uklízet",
+    "Je v každém bytě"
+  ],
+  "ZÁCLONY": [
+    "Lehké závěsy na okna",
+    "Propouštějí světlo",
+    "Jsou průhledné",
+    "Chrání soukromí"
+  ],
+  "ZÁDA": [
+    "Zadní část trupu",
+    "Opíráme se o ně na židli",
+    "Nosíme na nich batoh",
+    "Mohou bolet z těžkých věcí"
+  ],
+  "ZÁKLADY": [
+    "Nejdůležitější věci",
+    "Od nich se začíná",
+    "Bez nich to nejde",
+    "Musíme je znát"
+  ],
+  "ZÁMEK": [
+    "Sídlo králů nebo šlechticů",
+    "Velká a krásná budova",
+    "Často má věže a park",
+    "Navštěvujeme ho jako památku"
+  ],
+  "ZÁVĚSY": [
+    "Těžké látky na okna",
+    "Zatmavují místnost",
+    "Visí na tyči",
+    "Můžou být barevné"
+  ],
+  "ÚDOLÍ": [
+    "Nižina mezi horami",
+    "Teče jím často řeka",
+    "Je zde úrodná půda",
+    "Je chráněno před větrem"
+  ],
+  "ÚHLOMĚR": [
+    "Pomůcka na měření úhlů",
+    "Je půlkruhová",
+    "Má stupně",
+    "Používá se v geometrii"
+  ],
+  "ÚSPĚCH": [
+    "Když se nám něco podaří",
+    "Dosáhli jsme cíle",
+    "Máme radost",
+    "Opak neúspěchu"
+  ],
+  "ÚZKOST": [
+    "Pocit napětí",
+    "Strah z budoucnosti",
+    "Nevíme co bude",
+    "Srdce nám bije"
+  ],
+  "ÚZKÝ": [
+    "Má malou šířku",
+    "Od strany ke straně blízko",
+    "Opak širokého",
+    "Stezka je taková"
+  ],
+  "ČAJ": [
+    "Teplý nápoj z bylinek nebo ovoce",
+    "Pijeme ho, když jsme nemocní",
+    "Může být černý, zelený nebo ovocný",
+    "Sladíme si ho medem nebo cukrem"
+  ],
+  "ČEPICE": [
+    "Pokrývka hlavy",
+    "Nosíme ji v zimě, aby nám nebyla zima na uši",
+    "Může mít bambuli",
+    "Chrání před mrazem"
+  ],
+  "ČERNOBÍLÝ": [
+    "Má jen dvě barvy",
+    "Opak barevného",
+    "Staré fotografie jsou takové",
+    "Šachovnice je taková"
+  ],
+  "ČERNÝ": ["Nejtmavší barva", "Opak bílé", "Barva noci", "Absorbtuje světlo"],
+  "ČESNEK": [
+    "Štiplavá zelenina",
+    "Přírodní lék proti upírům",
+    "Skládá se ze stroužků",
+    "Dává se do jídla pro výraznou chuť"
+  ],
+  "ČTENÍ": [
+    "Poznávání písaem",
+    "Díváme se na slova",
+    "Získáváme informace",
+    "Máme otevřenou knihu"
+  ],
+  "ČTVEREC": [
+    "Geometrický tvar se čtyřmi stranami",
+    "Všechny strany jsou stejně dlouhé",
+    "Má čtyři rohy",
+    "Každý úhel je stejný"
+  ],
+  "ČTYŘKA": [
+    "Číslo po trojce",
+    "Píše se jako 4",
+    "Čtverec má čtyři strany",
+    "Auto má čtyři kola"
+  ],
+  "ČÁP": [
+    "Velký pták s dlouhýma červenýma nohama",
+    "Nosí prý děti",
+    "Staví si velká hnízda na komínech",
+    "Klape zobákem"
+  ],
+  "ČÍNA": [
+    "Velká země v Asii",
+    "Hlavní město je Peking",
+    "Mluví se tam čínsky",
+    "Žije tam nejvíc lidí"
+  ],
+  "ČÍSLO": [
+    "Znak pro počet",
+    "Jedna, dvě, tři, ...",
+    "Učíme se je ve škole v matematice",
+    "Používáme je při počítání"
+  ],
+  "ŘEKA": [
+    "Proudící voda v krajině",
+    "Vlévá se do moře",
+    "Plavou v ní ryby",
+    "Můžeme se v ní koupat"
+  ],
+  "ŘIDIČ": [
+    "Člověk, který řídí vozidla",
+    "Vozí lidi nebo náklad",
+    "Musí mít řidičák",
+    "Sedí za volantem"
+  ],
+  "ŠACHY": [
+    "Strategická hra na desce",
+    "Má bílé a černé figurky",
+    "Cílem je mat krále",
+    "Hrají dva hráči"
+  ],
+  "ŠATY": [
+    "Oblečení pro holky a ženy v jednom kuse",
+    "Nosí se v létě nebo na slavnostní příležitosti",
+    "Zakrývají tělo od ramen dolů",
+    "Mohou být barevné a s volánky"
+  ],
+  "ŠEDÝ": [
+    "Barva mezi bílou a černou",
+    "Má ji slon",
+    "Je to nevýrazná barva",
+    "Vzniká míchání černé a bílé"
+  ],
+  "ŠIROKÝ": [
+    "Má velkou šířku",
+    "Od strany ke straně daleko",
+    "Dálnice je taková",
+    "Není úzký"
+  ],
+  "ŠKOLA": [
+    "Místo, kam se chodí děti učit",
+    "Učí v ní paní učitelka",
+    "Máme v ní lavice a tabuli",
+    "Začíná v září"
+  ],
+  "ŠPANĚLSKO": [
+    "Země na jihu Evropy",
+    "Hlavní město je Madrid",
+    "Mluví se tam španělsky",
+    "Je tam teplo a korida"
+  ],
+  "ŠPLECH": [
+    "Zvuk do vody",
+    "Když skočíme do bazénu",
+    "Voda stříkne",
+    "Mokrý zvuk"
+  ],
+  "ŠROUB": [
+    "Kovová součástka se závitem",
+    "Zašroubovává se šroubovákem",
+    "Spojuje věci pevněji než hřebík",
+    "Může mít různou hlavičku"
+  ],
+  "ŠROUBOVÁKY": [
+    "Nástroje na šrouby",
+    "Mají kovový konec",
+    "Otáčíme jimi šroubý",
+    "Různé velikosti"
+  ],
+  "ŠTÍTEK": [
+    "Papírový označení",
+    "Píše se na něm text",
+    "Označuje věci",
+    "Lepí se"
+  ],
+  "ŠTĚSTÍ": [
+    "Pocit velké radosti",
+    "Máme ho při úspěchu",
+    "Usmíváme se při něm",
+    "Opak smutku"
+  ],
+  "ŠTĚTCE": [
+    "Nástroje na malování",
+    "Mají chlupy",
+    "Maluje se jimi",
+    "Namáčíme je do barvy"
+  ],
+  "ŠTĚŇATA": [
+    "Malí psi",
+    "Jsou roztomilá a hravá",
+    "Mají malé tlapky",
+    "Pijou mléko od matky"
+  ],
+  "ŠVESTKA": [
+    "Modré nebo fialové ovoce s peckou",
+    "Roste na stromě",
+    "Dělají se z ní povidla a knedlíky",
+    "Je sladká"
+  ],
+  "ŠÁLA": [
+    "Dlouhý kus látky, který se nosí kolem krku",
+    "Nosíme ji v zimě, aby nám nebyla zima",
+    "Může být pletená a barevná",
+    "Zahřeje nás"
+  ],
+  "ŠÍŘKA": [
+    "Jak moc nastranu",
+    "Z jedné strany na druhou",
+    "Silnice má několik metrů",
+    "Měří se metry"
+  ],
+  "ŤUK": [
+    "Zvuk klepání",
+    "Když zaklepeme na dveře",
+    "Ostrý krátký zvuk",
+    "Upozorňuje na sebe"
+  ],
+  "ŽALUZIE": [
+    "Roleta na okno",
+    "Stíní před sluncem",
+    "Můžou se zatahovat",
+    "Mají lamely"
+  ],
+  "ŽEHLIČKA": [
+    "Spotřebič na žehlení",
+    "Hladí pomačkané oblečení",
+    "Je horká",
+    "Musíme s ní být opatrní"
+  ],
+  "ŽELVA": [
+    "Plaz, který nosí krunýř",
+    "Je velmi pomalá",
+    "Může žít na souši i ve vodě",
+    "Dožívá se vysokého věku"
+  ],
+  "ŽEMLE": [
+    "Malé bílé pečivo",
+    "Je kulatá",
+    "Jíme ji k snídani",
+    "Můžeme ji rozkrojit"
+  ],
+  "ŽIDLE": [
+    "Nábytek na sezení",
+    "Má čtyři nohy a opěradlo",
+    "Stojí u stolu",
+    "Sedíme na ní při jídle"
+  ],
+  "ŽIRAFA": [
+    "Nejvyšší zvíře na světě",
+    "Má velmi dlouhý krk",
+    "Živí se listím ze stromů",
+    "Má skvrnitou srst"
+  ],
+  "ŽIRAFY": [
+    "Nejvyšší zvířata na světě",
+    "Mají velmi dlouhé krky",
+    "Žijí v Africe",
+    "Jedí listí ze stromů"
+  ],
+  "ŽÁBA": [
+    "Zelený obojživelník",
+    "Skáče a dělá 'kvák'",
+    "Žije u vody",
+    "Vyvíjí se z pulce"
+  ],
+  "ŽÁBY": [
+    "Zelené obojživelníky",
+    "Skáčou a dělají kvák",
+    "Žijí u vody",
+    "Vyvíjejí se z pulců"
+  ],
+  "ŽÁK": [
+    "Dítě, které chodí do školy",
+    "Učí se psát, číst a počítat",
+    "Nosí domů úkoly a známky",
+    "Sedí v lavici"
+  ],
+  "ŽÁRLIVOST": [
+    "Pocit z toho, že má někdo více",
+    "Chceme to taky",
+    "Můžeme ze zelená",
+    "Není to hezké"
+  ]
 }
+
