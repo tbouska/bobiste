@@ -1,0 +1,314 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f3e5f5; /* Light Lavender */
+    color: #4a148c; /* Deep Violet for text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+#game-container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 95%;
+    max-width: 850px;
+}
+
+header, footer {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+#crossword-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#crossword-grid {
+    display: grid;
+    gap: 4px;
+    padding: 4px;
+    background-color: #d1c4e9; /* Medium Lavender for grid background */
+    border: 2px solid #5e35b1; /* Deep Violet for grid border */
+}
+
+.grid-cell {
+    width: 42px;
+    height: 42px;
+    background-color: #ede7f6; /* Lighter Lavender */
+    border: 1px solid #9575cd; /* Mid-tone Violet */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-cell.empty {
+    background-color: transparent;
+    border: none;
+}
+
+.clue-number-cell {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    color: #4a148c;
+}
+
+.answer-cell {
+    background-color: #b39ddb; /* Distinctive Mid-tone Violet */
+    border: 2px solid #4a148c; /* Strongest Violet border */
+}
+
+.grid-cell input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    font-size: 22px;
+    color: #4a148c;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.grid-cell input:focus {
+    box-shadow: 0 0 0 3px #7e57c2;
+}
+
+.answer-cell input {
+    font-weight: bold;
+}
+
+.grid-cell input:disabled {
+    color: #757575; /* Darker Grey for hint letters for better visibility */
+    font-weight: normal;
+    background-color: #e0e0e0_light;
+}
+
+.answer-cell input:disabled {
+    font-weight: bold;
+}
+
+.correct-answer {
+    background-color: #dcedc8 !important;
+}
+
+.incorrect-answer {
+    background-color: #ffcdd2 !important;
+}
+
+#clues-container {
+    width: 100%;
+    max-width: 320px;
+}
+
+#clues-container h2 {
+    border-bottom: 2px solid #7e57c2;
+    padding-bottom: 5px;
+}
+
+#horizontal-clues-list {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 15px;
+}
+
+#horizontal-clues-list li {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hint-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #7e57c2;
+    color: white;
+    transition: background-color 0.2s, border-color 0.2s;
+    margin-left: 10px;
+}
+
+.hint-button:hover {
+    background-color: #5e35b1;
+}
+
+#virtual-keyboard {
+    position: relative;
+    padding-top: 50px;
+}
+
+.keyboard-header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.keyboard-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.keys-container, #difficulty-buttons-wrapper, #game-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+#difficulty-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.keys-container.hidden {
+    display: none;
+}
+
+.keyboard-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.keyboard-toggle input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 28px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #7e57c2;
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+#game-controls button, #difficulty-buttons button, .keys-container button {
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background-color: #7e57c2; /* Primary Violet for buttons */
+    color: white;
+    transition: background-color 0.2s, border-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#game-controls button:hover, #difficulty-buttons button:hover, .keys-container button:hover {
+    background-color: #5e35b1; /* Darker Violet on hover */
+}
+
+#difficulty-buttons button.active {
+    background-color: #4a148c; /* Deepest violet for active difficulty */
+    border-color: #ffffff;
+    font-weight: bold;
+}
+
+#completion-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#completion-overlay.hidden {
+    display: none;
+}
+
+#completion-message {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    color: #2e7d32;
+    font-size: 1.2em;
+}
+
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    border-radius: 50%;
+    animation: fall 5s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}

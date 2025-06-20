@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+ <html lang="cs">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Česká Tajenka</title>
+     <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+     <div id="confetti-container"></div>
+     <div id="game-container">
+         <header>
+             <h1>Česká Tajenka pro Děti</h1>
+             <div id="difficulty-buttons-wrapper">
+                 <div id="difficulty-buttons">
+                     <button data-value="0.25"><span class="icon">😊</span>Lehká</button>
+                     <button data-value="0.15"><span class="icon">🤔</span>Střední</button>
+                     <button data-value="0"><span class="icon">🤯</span>Těžká</button>
+                 </div>
+             </div>
+             <div id="game-controls">
+                 <button id="reset-btn"><span class="icon">🔄</span>Nová Hra</button>
+                 <button id="check-btn"><span class="icon">✔️</span>Zkontrolovat</button>
+             </div>
+         </header>
+ 
+         <main>
+             <div id="crossword-container">
+                 <div id="crossword-grid"></div>
+             </div>
+             <div id="clues-container">
+                 <h2>Co by to mohlo být?</h2>
+                 <ul id="horizontal-clues-list"></ul>
+             </div>
+         </main>
+ 
+         <footer>
+             <div id="virtual-keyboard"></div>
+         </footer>
+     </div>
+
+     <div id="completion-overlay" class="hidden">
+        <div id="completion-message">
+             <h2>Gratulujeme!</h2>
+             <p>Uhodl/a jsi tajenku: <span id="star-rating"></span></p>
+             <p><small>(klikni pro zavření)</small></p>
+        </div>
+     </div>
+
+     <script src="script.js"></script>
+ </body>
+ </html>
