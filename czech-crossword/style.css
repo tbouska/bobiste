@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     gap: 25px;
     width: 95%;
-    max-width: 850px;
+    max-width: 1200px;
 }
 
 header, footer {
@@ -28,7 +28,6 @@ header, footer {
 
 main {
     display: flex;
-    flex-wrap: wrap;
     gap: 25px;
     justify-content: center;
 }
@@ -111,11 +110,6 @@ main {
 
 .incorrect-answer {
     background-color: #ffcdd2 !important;
-}
-
-#clues-container {
-    width: 100%;
-    max-width: 320px;
 }
 
 #clues-container h2 {
@@ -263,6 +257,31 @@ input:checked + .slider:before {
     background-color: #4a148c; /* Deepest violet for active difficulty */
     border-color: #ffffff;
     font-weight: bold;
+}
+
+/* Responsive Layout */
+@media (min-aspect-ratio: 1/1) {
+    main {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #crossword-container {
+        flex-grow: 0;
+    }
+    #clues-container {
+        width: 320px;
+        max-width: 320px;
+    }
+}
+
+@media (max-aspect-ratio: 1/1) {
+    main {
+        flex-direction: column;
+    }
+    #clues-container {
+        width: 100%;
+        max-width: none;
+    }
 }
 
 #completion-overlay {
