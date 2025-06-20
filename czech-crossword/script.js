@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const gridElement = document.getElementById('crossword-grid');
     const cluesList = document.getElementById('horizontal-clues-list');
     const virtualKeyboard = document.getElementById('virtual-keyboard');
-    const checkBtn = document.getElementById('check-btn');
     const resetBtn = document.getElementById('reset-btn');
     const completionOverlay = document.getElementById('completion-overlay');
     const difficultyButtons = document.getElementById('difficulty-buttons');
@@ -42,38 +41,49 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
 
+        // Handle physical keyboard input
         gridElement.addEventListener('keydown', e => {
-            if (e.key !== 'Backspace' || !activeCell) return;
+            if (!activeCell) return;
             
-            if (activeCell.value === '') {
-                e.preventDefault();
-                const enabledInputs = Array.from(gridElement.querySelectorAll('input:not([disabled])'));
-                const currentIndex = enabledInputs.indexOf(activeCell);
-                if (currentIndex > 0) {
-                    const prevInput = enabledInputs[currentIndex - 1];
-                    prevInput.focus();
-                    prevInput.value = '';
+            if (e.key === 'Backspace') {
+                if (activeCell.value === '') {
+                    e.preventDefault();
+                    const enabledInputs = Array.from(gridElement.querySelectorAll('input:not([disabled])'));
+                    const currentIndex = enabledInputs.indexOf(activeCell);
+                    if (currentIndex > 0) {
+                        const prevInput = enabledInputs[currentIndex - 1];
+                        prevInput.focus();
+                        prevInput.value = '';
+                    }
                 }
-            }
-        });
-
-        gridElement.addEventListener('keyup', e => {
-            const key = e.key;
-            if (!activeCell || key.length !== 1 || !/^[a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]$/.test(key)) {
                 return;
             }
             
-            const enabledInputs = Array.from(gridElement.querySelectorAll('input:not([disabled])'));
-            const currentIndex = enabledInputs.indexOf(activeCell);
-
-            if (currentIndex < enabledInputs.length - 1) {
-                enabledInputs[currentIndex + 1].focus();
-            }
-
-            if (Array.from(enabledInputs).every(input => input.value !== '')) {
-                checkPuzzle();
+            // Check if it's a valid letter
+            if (/^[a-zA-ZáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]$/.test(e.key)) {
+                e.preventDefault(); // Prevent default to handle it ourselves
+                
+                // Set the value (overwriting any existing letter)
+                activeCell.value = e.key.toUpperCase();
+                
+                // Move to next cell
+                const enabledInputs = Array.from(gridElement.querySelectorAll('input:not([disabled])'));
+                const currentIndex = enabledInputs.indexOf(activeCell);
+                if (currentIndex < enabledInputs.length - 1) {
+                    enabledInputs[currentIndex + 1].focus();
+                }
+                
+                // Check if puzzle is complete
+                checkIfPuzzleComplete();
             }
         });
+    }
+    
+    function checkIfPuzzleComplete() {
+        const enabledInputs = Array.from(gridElement.querySelectorAll('input:not([disabled])'));
+        if (enabledInputs.every(input => input.value !== '')) {
+            checkPuzzle();
+        }
     }
 
     async function init() {
@@ -244,11 +254,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             const clueItem = document.createElement('li');
             clueItem.innerHTML = `<span>${index + 1}. ${wordInfo.clue}</span>`;
 
-            const hintButton = document.createElement('button');
-            hintButton.textContent = '💡';
-            hintButton.classList.add('hint-button');
-            hintButton.addEventListener('click', () => revealHint(wordInfo));
-            clueItem.appendChild(hintButton);
+            // Only show hint button if difficulty is not the hardest (0)
+            if (difficulty !== 0) {
+                const hintButton = document.createElement('button');
+                hintButton.textContent = '💡';
+                hintButton.classList.add('hint-button');
+                hintButton.addEventListener('click', () => revealHint(wordInfo));
+                clueItem.appendChild(hintButton);
+            }
             
             cluesList.appendChild(clueItem);
         });
@@ -320,6 +333,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             key.textContent = char;
             key.addEventListener('click', () => {
                 if (activeCell && !activeCell.disabled) {
+                    // Set the value (overwriting any existing letter)
                     activeCell.value = char;
     
                     const enabledInputs = Array.from(gridElement.querySelectorAll('input:not([disabled])'));
@@ -329,9 +343,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                         enabledInputs[currentIndex + 1].focus();
                     }
     
-                    if (enabledInputs.every(input => input.value !== '')) {
-                        checkPuzzle();
-                    }
+                    // Check if puzzle is complete
+                    checkIfPuzzleComplete();
                 }
             });
             keysContainer.appendChild(key);
@@ -356,13 +369,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (allWordsCorrect) {
             document.getElementById('star-rating').textContent = '🏆 ' + currentPuzzle.secretWord;
             gridElement.querySelectorAll('input').forEach(i => i.disabled = true);
-            checkBtn.disabled = true;
             completionOverlay.classList.remove('hidden');
             launchConfetti();
         }
     }
-
-    checkBtn.addEventListener('click', checkPuzzle);
 
     function launchConfetti() {
         for (let i = 0; i < 100; i++) {
