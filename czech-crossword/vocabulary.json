@@ -3381,12 +3381,12 @@
     "Země na jihu Evropy",
     "Hlavní město je Madrid",
     "Mluví se tam španělsky",
-    "Je tam teplo a korida"
+    "Země kde je teplo a moře"
   ],
-  "ŠPLECH": [
-    "Zvuk do vody",
+  "ŠPLOUCH": [
+    "Zvuk skoku do vody",
     "Když skočíme do bazénu",
-    "Voda stříkne",
+    "Zvuk když voda vystříkne",
     "Mokrý zvuk"
   ],
   "ŠROUB": [
@@ -3397,9 +3397,9 @@
   ],
   "ŠROUBOVÁKY": [
     "Nástroje na šrouby",
-    "Mají kovový konec",
-    "Otáčíme jimi šroubý",
-    "Různé velikosti"
+    "Nářadí s plochými kovovými konci",
+    "Otáčíme jimi šrouby",
+    "Používají se k montáži a demontáži"
   ],
   "ŠTÍTEK": [
     "Papírový označení",
@@ -3511,9 +3511,6 @@
   ],
   "ŽÁRLIVOST": [
     "Pocit z toho, že má někdo více",
-    "Chceme to taky",
-    "Můžeme ze zelená",
-    "Není to hezké"
+    "Cítíme se tak, když chceme co má druhý"
   ]
 }
-
