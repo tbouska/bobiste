@@ -1,2 +1,3 @@
-# bobiste
-Bobiště - kolekce her pro chytrý rozvoj dětí
+# Bobiště
+
+Kolekce her pro chytrý rozvoj dětí.
