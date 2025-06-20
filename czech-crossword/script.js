@@ -120,9 +120,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     function generatePuzzle(maxAttempts) {
+        let filteredWords = wordsList;
+        if (difficulty === 0.25) { // Easiest
+            filteredWords = wordsList.filter(w => w.length <= 6);
+        } else if (difficulty === 0.15) { // Medium
+            filteredWords = wordsList.filter(w => w.length <= 8);
+        } else if (difficulty === 0) { // Hardest
+            filteredWords = wordsList.filter(w => w.length >= 5);
+        }
+
         for (let attempt = 0; attempt < maxAttempts; attempt++) {
-            const secretWord = wordsList[Math.floor(Math.random() * wordsList.length)];
-            if(secretWord.length < 3) continue;
+            const secretWord = filteredWords[Math.floor(Math.random() * filteredWords.length)];
+            if(!secretWord || secretWord.length < 3) continue;
 
             const plannedWords = [];
             let generationSuccess = true;
