@@ -263,14 +263,25 @@ document.addEventListener('DOMContentLoaded', async () => {
             const clueItem = document.createElement('li');
             clueItem.innerHTML = `<span>${index + 1}. ${wordInfo.clue}</span>`;
 
+            const buttonWrapper = document.createElement('div');
+            buttonWrapper.classList.add('clue-buttons');
+
+            const newClueButton = document.createElement('button');
+            newClueButton.textContent = '🔄';
+            newClueButton.classList.add('new-clue-button', 'hint-button');
+            newClueButton.addEventListener('click', () => getNewClue(wordInfo, clueItem));
+            buttonWrapper.appendChild(newClueButton);
+
             // Only show hint button if difficulty is not the hardest (0)
             if (difficulty !== 0) {
                 const hintButton = document.createElement('button');
                 hintButton.textContent = '💡';
                 hintButton.classList.add('hint-button');
                 hintButton.addEventListener('click', () => revealHint(wordInfo));
-                clueItem.appendChild(hintButton);
+                buttonWrapper.appendChild(hintButton);
             }
+            
+            clueItem.appendChild(buttonWrapper);
             
             cluesList.appendChild(clueItem);
         });
@@ -299,6 +310,25 @@ document.addEventListener('DOMContentLoaded', async () => {
             const cellToReveal = wordCells[randomIndex];
             cellToReveal.input.value = cellToReveal.correct;
             cellToReveal.input.disabled = true;
+        }
+    }
+
+    function getNewClue(wordInfo, clueItem) {
+        const currentClue = wordInfo.clue;
+        const availableClues = vocabulary[wordInfo.word];
+        let newClue = currentClue;
+
+        if (availableClues.length > 1) {
+            do {
+                newClue = availableClues[Math.floor(Math.random() * availableClues.length)];
+            } while (newClue === currentClue);
+        }
+
+        wordInfo.clue = newClue;
+        const clueSpan = clueItem.querySelector('span');
+        if (clueSpan) {
+            const originalIndex = clueSpan.textContent.split('.')[0];
+            clueSpan.textContent = `${originalIndex}. ${newClue}`;
         }
     }
 

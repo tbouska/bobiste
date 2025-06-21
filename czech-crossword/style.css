@@ -130,6 +130,12 @@ main {
     align-items: center;
 }
 
+.clue-buttons {
+    display: flex;
+    gap: 5px;
+    margin-left: 10px;
+}
+
 .hint-button {
     padding: 5px 10px;
     font-size: 12px;
@@ -140,7 +146,6 @@ main {
     background-color: #7e57c2;
     color: white;
     transition: background-color 0.2s, border-color 0.2s;
-    margin-left: 10px;
 }
 
 .hint-button:hover {
