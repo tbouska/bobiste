@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe vs Bot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .game-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-info {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        .cell {
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 8px;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            min-height: 74px;
+            max-height: 74px;
+        }
+
+        .cell:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.05);
+        }
+
+        .cell:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .cell.x {
+            color: #e74c3c;
+        }
+
+        .cell.o {
+            color: #3498db;
+        }
+
+        .status {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            min-height: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .difficulty {
+            margin-bottom: 1rem;
+        }
+
+        .difficulty select {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 1rem;
+        }
+
+        .score {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .score-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .winner {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .winning-line {
+            background: rgba(255, 215, 0, 0.3) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎮 Tic Tac Toe vs Bot</h1>
+        
+        <div class="difficulty">
+            <label for="difficulty-select">Bot Difficulty: </label>
+            <select id="difficulty-select">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard (Unbeatable)</option>
+            </select>
+        </div>
+
+        <div class="score">
+            <div class="score-item">
+                <div>Player (X)</div>
+                <div id="player-score">0</div>
+            </div>
+            <div class="score-item">
+                <div>Bot (O)</div>
+                <div id="bot-score">0</div>
+            </div>
+            <div class="score-item">
+                <div>Draws</div>
+                <div id="draw-score">0</div>
+            </div>
+        </div>
+
+        <div class="game-info">
+            <div class="status" id="status">Your turn! Click a cell to play.</div>
+        </div>
+
+        <div class="game-board" id="game-board">
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+            <button class="cell" data-index="9"></button>
+            <button class="cell" data-index="10"></button>
+            <button class="cell" data-index="11"></button>
+            <button class="cell" data-index="12"></button>
+            <button class="cell" data-index="13"></button>
+            <button class="cell" data-index="14"></button>
+            <button class="cell" data-index="15"></button>
+            <button class="cell" data-index="16"></button>
+            <button class="cell" data-index="17"></button>
+            <button class="cell" data-index="18"></button>
+            <button class="cell" data-index="19"></button>
+            <button class="cell" data-index="20"></button>
+            <button class="cell" data-index="21"></button>
+            <button class="cell" data-index="22"></button>
+            <button class="cell" data-index="23"></button>
+            <button class="cell" data-index="24"></button>
+        </div>
+
+        <div class="controls">
+            <button id="reset-game">New Game</button>
+            <button id="reset-scores">Reset Scores</button>
+        </div>
+    </div>
+
+    <script>
+        class TicTacToeGame {
+            constructor() {
+                this.board = Array(25).fill('');
+                this.currentPlayer = 'X';
+                this.gameActive = true;
+                this.scores = {
+                    player: 0,
+                    bot: 0,
+                    draws: 0
+                };
+                
+                this.cells = document.querySelectorAll('.cell');
+                this.status = document.getElementById('status');
+                this.difficultySelect = document.getElementById('difficulty-select');
+                this.playerScore = document.getElementById('player-score');
+                this.botScore = document.getElementById('bot-score');
+                this.drawScore = document.getElementById('draw-score');
+                
+                // 5x5 winning conditions - need 4 in a row
+                this.winningConditions = [
+                    // Rows
+                    [0, 1, 2, 3], [1, 2, 3, 4],
+                    [5, 6, 7, 8], [6, 7, 8, 9],
+                    [10, 11, 12, 13], [11, 12, 13, 14],
+                    [15, 16, 17, 18], [16, 17, 18, 19],
+                    [20, 21, 22, 23], [21, 22, 23, 24],
+                    
+                    // Columns
+                    [0, 5, 10, 15], [5, 10, 15, 20],
+                    [1, 6, 11, 16], [6, 11, 16, 21],
+                    [2, 7, 12, 17], [7, 12, 17, 22],
+                    [3, 8, 13, 18], [8, 13, 18, 23],
+                    [4, 9, 14, 19], [9, 14, 19, 24],
+                    
+                    // Diagonals (top-left to bottom-right)
+                    [0, 6, 12, 18], [1, 7, 13, 19], [5, 11, 17, 23], [6, 12, 18, 24],
+                    
+                    // Diagonals (top-right to bottom-left)
+                    [3, 7, 11, 15], [4, 8, 12, 16], [8, 12, 16, 20], [9, 13, 17, 21]
+                ];
+                
+                this.initializeGame();
+            }
+            
+            initializeGame() {
+                this.cells.forEach((cell, index) => {
+                    cell.addEventListener('click', () => this.handleCellClick(index));
+                });
+                
+                document.getElementById('reset-game').addEventListener('click', () => this.resetGame());
+                document.getElementById('reset-scores').addEventListener('click', () => this.resetScores());
+                
+                this.updateScoreDisplay();
+            }
+            
+            handleCellClick(index) {
+                if (this.board[index] !== '' || !this.gameActive || this.currentPlayer !== 'X') {
+                    return;
+                }
+                
+                this.makeMove(index, 'X');
+                
+                if (this.gameActive && !this.checkGameEnd()) {
+                    this.currentPlayer = 'O';
+                    this.status.textContent = "Bot is thinking...";
+                    
+                    // Add a small delay to make the bot seem more natural
+                    setTimeout(() => {
+                        this.makeBotMove();
+                    }, 500 + Math.random() * 1000);
+                }
+            }
+            
+            makeMove(index, player) {
+                this.board[index] = player;
+                this.cells[index].textContent = player;
+                this.cells[index].classList.add(player.toLowerCase());
+                this.cells[index].disabled = true;
+            }
+            
+            makeBotMove() {
+                if (!this.gameActive) return;
+                
+                const difficulty = this.difficultySelect.value;
+                let move;
+                
+                switch (difficulty) {
+                    case 'easy':
+                        // 80% random, 20% strategic
+                        move = Math.random() < 0.8 ? this.getRandomMove() : this.getBestMove();
+                        break;
+                    case 'medium':
+                        // 85% strategic, 15% random (much more aggressive)
+                        move = Math.random() < 0.85 ? this.getBestMove() : this.getRandomMove();
+                        break;
+                    case 'hard':
+                        // Always strategic
+                        move = this.getBestMove();
+                        break;
+                }
+                
+                if (move !== -1) {
+                    this.makeMove(move, 'O');
+                    this.currentPlayer = 'X';
+                    
+                    if (!this.checkGameEnd()) {
+                        this.status.textContent = "Your turn! Click a cell to play.";
+                    }
+                }
+            }
+            
+            getRandomMove() {
+                const availableMoves = this.board.map((cell, index) => cell === '' ? index : null)
+                                               .filter(index => index !== null);
+                
+                return availableMoves.length > 0 ? 
+                    availableMoves[Math.floor(Math.random() * availableMoves.length)] : -1;
+            }
+            
+            getBestMove() {
+                // 1. Try to win immediately
+                for (let i = 0; i < 25; i++) {
+                    if (this.board[i] === '') {
+                        this.board[i] = 'O';
+                        if (this.checkWin('O')) {
+                            this.board[i] = '';
+                            return i;
+                        }
+                        this.board[i] = '';
+                    }
+                }
+                
+                // 2. Block player from winning
+                for (let i = 0; i < 25; i++) {
+                    if (this.board[i] === '') {
+                        this.board[i] = 'X';
+                        if (this.checkWin('X')) {
+                            this.board[i] = '';
+                            return i;
+                        }
+                        this.board[i] = '';
+                    }
+                }
+                
+                // 3. Create double threats (fork opportunities)
+                const forkMove = this.findForkingMove('O');
+                if (forkMove !== -1) {
+                    return forkMove;
+                }
+                
+                // 4. Block player's fork opportunities
+                const blockFork = this.findForkingMove('X');
+                if (blockFork !== -1) {
+                    return blockFork;
+                }
+                
+                // 5. Create threats (get 3 in a row to force defense)
+                const threatMove = this.findThreatMove('O');
+                if (threatMove !== -1) {
+                    return threatMove;
+                }
+                
+                // 6. Extend existing sequences aggressively
+                const extendMove = this.findExtensionMove('O');
+                if (extendMove !== -1) {
+                    return extendMove;
+                }
+                
+                // 7. Take center if available
+                if (this.board[12] === '') {
+                    return 12;
+                }
+                
+                // 8. Take strategic positions near existing pieces
+                const strategicMove = this.findStrategicMove();
+                if (strategicMove !== -1) {
+                    return strategicMove;
+                }
+                
+                // 9. Take corners
+                const corners = [0, 4, 20, 24];
+                const shuffledCorners = corners.sort(() => Math.random() - 0.5);
+                for (let corner of shuffledCorners) {
+                    if (this.board[corner] === '') {
+                        return corner;
+                    }
+                }
+                
+                // 10. Take any available move
+                return this.getRandomMove();
+            }
+            
+            // Find moves that create multiple winning threats (forks)
+            findForkingMove(player) {
+                for (let i = 0; i < 25; i++) {
+                    if (this.board[i] === '') {
+                        this.board[i] = player;
+                        const threats = this.countThreats(player);
+                        this.board[i] = '';
+                        
+                        if (threats >= 2) {
+                            return i;
+                        }
+                    }
+                }
+                return -1;
+            }
+            
+            // Count how many ways a player can win in one move
+            countThreats(player) {
+                let threats = 0;
+                for (let condition of this.winningConditions) {
+                    const playerCount = condition.filter(index => this.board[index] === player).length;
+                    const emptyCount = condition.filter(index => this.board[index] === '').length;
+                    
+                    // A threat is 3 of our pieces + 1 empty in a winning line
+                    if (playerCount === 3 && emptyCount === 1) {
+                        threats++;
+                    }
+                }
+                return threats;
+            }
+            
+            // Find moves that create threats (3 in a row)
+            findThreatMove(player) {
+                const bestMoves = [];
+                
+                for (let i = 0; i < 25; i++) {
+                    if (this.board[i] === '') {
+                        this.board[i] = player;
+                        
+                        // Check if this creates a threat
+                        for (let condition of this.winningConditions) {
+                            const playerCount = condition.filter(index => this.board[index] === player).length;
+                            const emptyCount = condition.filter(index => this.board[index] === '').length;
+                            
+                            if (playerCount === 3 && emptyCount === 1) {
+                                bestMoves.push(i);
+                                break;
+                            }
+                        }
+                        
+                        this.board[i] = '';
+                    }
+                }
+                
+                return bestMoves.length > 0 ? bestMoves[Math.floor(Math.random() * bestMoves.length)] : -1;
+            }
+            
+            // Find moves that extend existing sequences
+            findExtensionMove(player) {
+                const opponent = player === 'O' ? 'X' : 'O';
+                const goodMoves = [];
+                
+                for (let i = 0; i < 25; i++) {
+                    if (this.board[i] === '') {
+                        this.board[i] = player;
+                        
+                        // Check all winning conditions for this move
+                        for (let condition of this.winningConditions) {
+                            const playerCount = condition.filter(index => this.board[index] === player).length;
+                            const opponentCount = condition.filter(index => this.board[index] === opponent).length;
+                            const emptyCount = condition.filter(index => this.board[index] === '').length;
+                            
+                            // Good moves: 2 of ours, 0 opponent, 2 empty (building sequence)
+                            if (playerCount === 2 && opponentCount === 0 && emptyCount === 2) {
+                                goodMoves.push(i);
+                            }
+                            // Or 1 of ours, 0 opponent, 3 empty (starting sequence)
+                            else if (playerCount === 1 && opponentCount === 0 && emptyCount === 3) {
+                                goodMoves.push(i);
+                            }
+                        }
+                        
+                        this.board[i] = '';
+                    }
+                }
+                
+                return goodMoves.length > 0 ? goodMoves[Math.floor(Math.random() * goodMoves.length)] : -1;
+            }
+            
+            // Find strategic positions near existing pieces
+            findStrategicMove() {
+                const adjacentMoves = [];
+                
+                // Look for empty cells adjacent to our pieces
+                for (let i = 0; i < 25; i++) {
+                    if (this.board[i] === 'O') {
+                        const adjacent = this.getAdjacentCells(i);
+                        for (let adj of adjacent) {
+                            if (this.board[adj] === '' && !adjacentMoves.includes(adj)) {
+                                adjacentMoves.push(adj);
+                            }
+                        }
+                    }
+                }
+                
+                return adjacentMoves.length > 0 ? adjacentMoves[Math.floor(Math.random() * adjacentMoves.length)] : -1;
+            }
+            
+            // Get adjacent cells (horizontally, vertically, diagonally)
+            getAdjacentCells(index) {
+                const row = Math.floor(index / 5);
+                const col = index % 5;
+                const adjacent = [];
+                
+                for (let r = Math.max(0, row - 1); r <= Math.min(4, row + 1); r++) {
+                    for (let c = Math.max(0, col - 1); c <= Math.min(4, col + 1); c++) {
+                        const adjIndex = r * 5 + c;
+                        if (adjIndex !== index) {
+                            adjacent.push(adjIndex);
+                        }
+                    }
+                }
+                
+                return adjacent;
+            }
+            
+            checkWin(player) {
+                return this.winningConditions.some(condition => {
+                    return condition.every(index => this.board[index] === player);
+                });
+            }
+            
+            checkGameEnd() {
+                // Check for win
+                for (let condition of this.winningConditions) {
+                    if (condition.every(index => this.board[index] === 'X')) {
+                        this.endGame('Player wins! 🎉', 'player', condition);
+                        return true;
+                    }
+                    if (condition.every(index => this.board[index] === 'O')) {
+                        this.endGame('Bot wins! 🤖', 'bot', condition);
+                        return true;
+                    }
+                }
+                
+                // Check for draw
+                if (this.board.every(cell => cell !== '')) {
+                    this.endGame("It's a draw! 🤝", 'draw');
+                    return true;
+                }
+                
+                return false;
+            }
+            
+            endGame(message, winner, winningLine = null) {
+                this.gameActive = false;
+                this.status.textContent = message;
+                this.status.classList.add('winner');
+                
+                if (winningLine) {
+                    winningLine.forEach(index => {
+                        this.cells[index].classList.add('winning-line');
+                    });
+                }
+                
+                this.cells.forEach(cell => {
+                    cell.disabled = true;
+                });
+                
+                // Update scores
+                this.scores[winner]++;
+                this.updateScoreDisplay();
+                
+                setTimeout(() => {
+                    this.status.classList.remove('winner');
+                }, 2000);
+            }
+            
+            resetGame() {
+                this.board = Array(25).fill('');
+                this.currentPlayer = 'X';
+                this.gameActive = true;
+                this.status.textContent = "Your turn! Click a cell to play.";
+                this.status.classList.remove('winner');
+                
+                this.cells.forEach(cell => {
+                    cell.textContent = '';
+                    cell.disabled = false;
+                    cell.classList.remove('x', 'o', 'winning-line');
+                });
+            }
+            
+            resetScores() {
+                this.scores = {
+                    player: 0,
+                    bot: 0,
+                    draws: 0
+                };
+                this.updateScoreDisplay();
+            }
+            
+            updateScoreDisplay() {
+                this.playerScore.textContent = this.scores.player;
+                this.botScore.textContent = this.scores.bot;
+                this.drawScore.textContent = this.scores.draws;
+            }
+        }
+        
+        // Start the game when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new TicTacToeGame();
+        });
+    </script>
+</body>
+</html>
